@@ -15,7 +15,7 @@ from PySide6.QtUiTools import QUiLoader
 from qt_material       import apply_stylesheet   # added
 from ui_form           import Ui_MainWindow
 
-from Command_IO import  Command_IO, ErrorCode, Joints
+from Command_IO import  Command_IO, ErrorCode, Joints, ServoCommands
 
 # Important:
 # You need to run the following command to generate the ui_form.py file
@@ -26,6 +26,9 @@ loader = QUiLoader()                # Set up a loader object
 Command_IO = Command_IO(Ui_MainWindow)
 ErrorCode = ErrorCode
 Platform_test = Platform_test
+
+DEFAULT_PORT    =  9
+SPEED_THRESHOLD = 10
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -162,9 +165,25 @@ class MainWindow(QMainWindow):
 
 
     def Execute_servo_cmd(self, joint, position, speed, group):
-        print(position)
-        print(speed)
-        print(group)
+        servo_cmd = ServoCommands.ABS_MOVE
+        if (group == True):
+            servo_cmd = ServoCommands.ABS_MOVE_SYNC
+        cmd_string = ("servo " + DEFAULT_PORT + servo_cmd + joint + position)
+        if (speed < SPEED_THRESHOLD):
+            cmd_string =("servo " + DEFAULT_PORT + servo_cmd + joint + position + "\n")
+        else:
+            cmd_string =("servo " + DEFAULT_PORT + servo_cmd + joint + position + speed + "\n")
+        self.log_message(self.cmd_string)
+        first_val = 0
+        status =  Command_IO.do_command(self.cmd_string, first_val)
+        print(status)
+        self.log_message(Command_IO.reply_string)
+        return status
+
+
+        # print(position)
+        # print(speed)
+        # print(group)
 
 
 

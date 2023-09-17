@@ -27,7 +27,7 @@
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="set_serial_port_tab">
      <property name="enabled">
@@ -748,7 +748,7 @@
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Slow</string>
+              <string>Normal</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -774,7 +774,7 @@
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Normal</string>
+              <string>Slow</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -789,13 +789,16 @@
             <number>0</number>
            </property>
            <property name="maximum">
-            <number>30</number>
+            <number>250</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="invertedAppearance">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="invertedControls">
             <bool>false</bool>
@@ -864,7 +867,7 @@
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Slow</string>
+              <string>Normal</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -890,7 +893,7 @@
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Normal</string>
+              <string>Slow</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -905,13 +908,16 @@
             <number>0</number>
            </property>
            <property name="maximum">
-            <number>30</number>
+            <number>250</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="invertedAppearance">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="invertedControls">
             <bool>false</bool>
@@ -1311,7 +1317,7 @@
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Slow</string>
+              <string>Normal</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1337,7 +1343,7 @@
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Normal</string>
+              <string>Slow</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1352,13 +1358,16 @@
             <number>0</number>
            </property>
            <property name="maximum">
-            <number>30</number>
+            <number>250</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="invertedAppearance">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="invertedControls">
             <bool>false</bool>
@@ -1409,7 +1418,7 @@
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Slow</string>
+              <string>Normal</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1435,7 +1444,7 @@
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Normal</string>
+              <string>Slow</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1450,13 +1459,16 @@
             <number>0</number>
            </property>
            <property name="maximum">
-            <number>30</number>
+            <number>250</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="invertedAppearance">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="invertedControls">
             <bool>false</bool>
@@ -2125,7 +2137,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Slow</string>
+              <string>Normal</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2151,7 +2163,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Normal</string>
+              <string>Slow</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2166,13 +2178,16 @@ color: rgb(255, 255, 0)</string>
             <number>0</number>
            </property>
            <property name="maximum">
-            <number>30</number>
+            <number>250</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="invertedAppearance">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="invertedControls">
             <bool>false</bool>
@@ -2241,7 +2256,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Slow</string>
+              <string>Normal</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2267,7 +2282,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Normal</string>
+              <string>Slow</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2282,13 +2297,16 @@ color: rgb(255, 255, 0)</string>
             <number>0</number>
            </property>
            <property name="maximum">
-            <number>30</number>
+            <number>250</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="invertedAppearance">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="invertedControls">
             <bool>false</bool>
@@ -2688,7 +2706,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Slow</string>
+              <string>Normal</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2714,7 +2732,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Normal</string>
+              <string>Slow</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2729,13 +2747,16 @@ color: rgb(255, 255, 0)</string>
             <number>0</number>
            </property>
            <property name="maximum">
-            <number>30</number>
+            <number>250</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="invertedAppearance">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="invertedControls">
             <bool>false</bool>
@@ -2786,7 +2807,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Slow</string>
+              <string>Normal</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2812,7 +2833,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>Normal</string>
+              <string>Slow</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2827,13 +2848,16 @@ color: rgb(255, 255, 0)</string>
             <number>0</number>
            </property>
            <property name="maximum">
-            <number>30</number>
+            <number>250</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="invertedAppearance">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="invertedControls">
             <bool>false</bool>
