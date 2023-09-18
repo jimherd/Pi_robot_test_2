@@ -236,7 +236,7 @@
         </widget>
        </item>
        <item row="6" column="0">
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="lab_22">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -270,7 +270,7 @@
         </widget>
        </item>
        <item row="8" column="0">
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="lab_32">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -291,7 +291,7 @@
         </widget>
        </item>
        <item row="8" column="8">
-        <widget class="QCheckBox" name="Left_eyebrow_group_checkbox">
+        <widget class="QCheckBox" name="checkbox_30">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -309,7 +309,7 @@
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="lab_12">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -376,7 +376,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_9">
            <item>
-            <widget class="QLabel" name="label_18">
+            <widget class="QLabel" name="lab_10">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -428,7 +428,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QLabel" name="label_20">
+            <widget class="QLabel" name="lab_11">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -443,7 +443,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Left_UD_position_slider">
+          <widget class="QSlider" name="slider_10">
            <property name="minimum">
             <number>-45</number>
            </property>
@@ -471,7 +471,7 @@
         </widget>
        </item>
        <item row="4" column="8">
-        <widget class="QCheckBox" name="Left_UD_group_checkbox">
+        <widget class="QCheckBox" name="checkbox_10">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -517,7 +517,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
            <item>
-            <widget class="QLabel" name="label_11">
+            <widget class="QLabel" name="lab_00">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -569,7 +569,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QLabel" name="label_15">
+            <widget class="QLabel" name="lab_01">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -584,7 +584,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Left_LR_position_slider">
+          <widget class="QSlider" name="slider_00">
            <property name="minimum">
             <number>-60</number>
            </property>
@@ -651,7 +651,7 @@
         </widget>
        </item>
        <item row="2" column="8">
-        <widget class="QCheckBox" name="Left_LR_group_checkbox">
+        <widget class="QCheckBox" name="checkbox_00">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -671,7 +671,7 @@
        <item row="2" column="0">
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <item>
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="lab_02">
            <property name="font">
             <font>
              <family>Segoe UI</family>
@@ -784,7 +784,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Left_LR_speed_slider">
+          <widget class="QSlider" name="slider_01">
            <property name="minimum">
             <number>0</number>
            </property>
@@ -808,7 +808,7 @@
         </layout>
        </item>
        <item row="6" column="10">
-        <widget class="QPushButton" name="Left_eyelid_go_button">
+        <widget class="QPushButton" name="button_20">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -903,7 +903,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Left_eyebrow_speed_slider_2">
+          <widget class="QSlider" name="slider_31">
            <property name="minimum">
             <number>0</number>
            </property>
@@ -940,7 +940,7 @@
         </widget>
        </item>
        <item row="8" column="3">
-        <widget class="QSpinBox" name="Left_eyebrow_spinbox">
+        <widget class="QSpinBox" name="spinbox_30">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
          </property>
@@ -953,7 +953,7 @@
         </widget>
        </item>
        <item row="2" column="3">
-        <widget class="QSpinBox" name="Left_LR_spinbox">
+        <widget class="QSpinBox" name="spinbox_00">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
          </property>
@@ -966,7 +966,7 @@
         </widget>
        </item>
        <item row="8" column="10">
-        <widget class="QPushButton" name="Left_eyebrow_go_button">
+        <widget class="QPushButton" name="button_30">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -984,7 +984,7 @@
         </widget>
        </item>
        <item row="4" column="10">
-        <widget class="QPushButton" name="Left_UD_go_button">
+        <widget class="QPushButton" name="button_10">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -1002,7 +1002,7 @@
         </widget>
        </item>
        <item row="4" column="3">
-        <widget class="QSpinBox" name="Left_UD_spinbox">
+        <widget class="QSpinBox" name="spinbox_10">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
          </property>
@@ -1028,7 +1028,7 @@
         </widget>
        </item>
        <item row="6" column="3">
-        <widget class="QSpinBox" name="Left_eyelid_spinbox">
+        <widget class="QSpinBox" name="spinbox_20">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
          </property>
@@ -1048,7 +1048,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_13">
            <item>
-            <widget class="QLabel" name="label_28">
+            <widget class="QLabel" name="lab_30">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -1100,7 +1100,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QLabel" name="label_30">
+            <widget class="QLabel" name="lab_31">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -1115,7 +1115,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Left_eyebrow_position_slider">
+          <widget class="QSlider" name="slider_30">
            <property name="minimum">
             <number>-45</number>
            </property>
@@ -1156,7 +1156,7 @@
         </widget>
        </item>
        <item row="6" column="8">
-        <widget class="QCheckBox" name="Left_eyelid_group_checkbox">
+        <widget class="QCheckBox" name="checkbox_20">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -1207,7 +1207,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_11">
            <item>
-            <widget class="QLabel" name="label_23">
+            <widget class="QLabel" name="lab_20">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -1259,7 +1259,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QLabel" name="label_25">
+            <widget class="QLabel" name="lab_21">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -1274,7 +1274,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Left_eyelid_position_slider">
+          <widget class="QSlider" name="slider_20">
            <property name="minimum">
             <number>-45</number>
            </property>
@@ -1353,7 +1353,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Left_eyelid_speed_slider">
+          <widget class="QSlider" name="slider_21">
            <property name="minimum">
             <number>0</number>
            </property>
@@ -1454,7 +1454,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Left_UD_speed_slider">
+          <widget class="QSlider" name="slider_11">
            <property name="minimum">
             <number>0</number>
            </property>
@@ -1478,7 +1478,7 @@
         </layout>
        </item>
        <item row="2" column="10">
-        <widget class="QPushButton" name="Left_LR_go_button">
+        <widget class="QPushButton" name="button_00">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -1540,23 +1540,23 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
       </layout>
-      <zorder>Left_UD_go_button</zorder>
-      <zorder>label_6</zorder>
-      <zorder>Left_UD_group_checkbox</zorder>
+      <zorder>button_10</zorder>
+      <zorder>lab_22</zorder>
+      <zorder>checkbox_10</zorder>
       <zorder>line_22</zorder>
-      <zorder>Left_LR_go_button</zorder>
-      <zorder>Left_eyelid_go_button</zorder>
-      <zorder>Left_eyebrow_go_button</zorder>
-      <zorder>label_7</zorder>
+      <zorder>button_00</zorder>
+      <zorder>button_20</zorder>
+      <zorder>button_30</zorder>
+      <zorder>lab_32</zorder>
       <zorder>line_6</zorder>
       <zorder>line_7</zorder>
       <zorder>line_16</zorder>
       <zorder>line_20</zorder>
       <zorder>line_19</zorder>
-      <zorder>Left_eyebrow_spinbox</zorder>
+      <zorder>spinbox_30</zorder>
       <zorder>line_11</zorder>
-      <zorder>Left_LR_spinbox</zorder>
-      <zorder>Left_LR_group_checkbox</zorder>
+      <zorder>spinbox_00</zorder>
+      <zorder>checkbox_00</zorder>
       <zorder>line_8</zorder>
       <zorder>line_4</zorder>
       <zorder>line_12</zorder>
@@ -1565,19 +1565,19 @@ color: rgb(255, 255, 0)</string>
       <zorder>line_15</zorder>
       <zorder>line_24</zorder>
       <zorder>line_18</zorder>
-      <zorder>Left_eyelid_group_checkbox</zorder>
+      <zorder>checkbox_20</zorder>
       <zorder>line_23</zorder>
-      <zorder>Left_eyelid_spinbox</zorder>
-      <zorder>Left_eyebrow_group_checkbox</zorder>
+      <zorder>spinbox_20</zorder>
+      <zorder>checkbox_30</zorder>
       <zorder>line_14</zorder>
       <zorder>line</zorder>
-      <zorder>Left_UD_spinbox</zorder>
+      <zorder>spinbox_10</zorder>
       <zorder>line_17</zorder>
       <zorder>line_13</zorder>
       <zorder>line_10</zorder>
       <zorder>line_3</zorder>
       <zorder>line_9</zorder>
-      <zorder>label_3</zorder>
+      <zorder>lab_12</zorder>
       <zorder>line_25</zorder>
       <zorder>label_4</zorder>
       <zorder>label_5</zorder>
@@ -1625,7 +1625,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="6" column="0">
-        <widget class="QLabel" name="label_10">
+        <widget class="QLabel" name="lab_62">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -1659,7 +1659,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="8" column="0">
-        <widget class="QLabel" name="label_12">
+        <widget class="QLabel" name="lab_72">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -1680,7 +1680,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="8" column="8">
-        <widget class="QCheckBox" name="Right_eyebrow_group_checkbox">
+        <widget class="QCheckBox" name="checkbox_70">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -1698,7 +1698,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QLabel" name="label_14">
+        <widget class="QLabel" name="lab_52">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -1765,7 +1765,7 @@ color: rgb(255, 255, 0)</string>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_15">
            <item>
-            <widget class="QLabel" name="label_33">
+            <widget class="QLabel" name="lab_50">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -1817,7 +1817,7 @@ color: rgb(255, 255, 0)</string>
             </spacer>
            </item>
            <item>
-            <widget class="QLabel" name="label_35">
+            <widget class="QLabel" name="lab_51">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -1832,7 +1832,7 @@ color: rgb(255, 255, 0)</string>
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Right_UD_position_slider">
+          <widget class="QSlider" name="slider_50">
            <property name="minimum">
             <number>-45</number>
            </property>
@@ -1860,7 +1860,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="4" column="8">
-        <widget class="QCheckBox" name="Left_UD_group_checkbox_5">
+        <widget class="QCheckBox" name="checkbox_50">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -1906,7 +1906,7 @@ color: rgb(255, 255, 0)</string>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_16">
            <item>
-            <widget class="QLabel" name="label_37">
+            <widget class="QLabel" name="lab_40">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -1958,7 +1958,7 @@ color: rgb(255, 255, 0)</string>
             </spacer>
            </item>
            <item>
-            <widget class="QLabel" name="label_39">
+            <widget class="QLabel" name="lab_41">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -1973,7 +1973,7 @@ color: rgb(255, 255, 0)</string>
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Right_LR_position_slider">
+          <widget class="QSlider" name="slider_40">
            <property name="minimum">
             <number>-60</number>
            </property>
@@ -2040,7 +2040,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="2" column="8">
-        <widget class="QCheckBox" name="Right_LR_group_checkbox_2">
+        <widget class="QCheckBox" name="checkbox_40">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -2060,7 +2060,7 @@ color: rgb(255, 255, 0)</string>
        <item row="2" column="0">
         <layout class="QHBoxLayout" name="horizontalLayout_17">
          <item>
-          <widget class="QLabel" name="label_40">
+          <widget class="QLabel" name="lab_42">
            <property name="font">
             <font>
              <family>Segoe UI</family>
@@ -2173,7 +2173,7 @@ color: rgb(255, 255, 0)</string>
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Right_LR_speed_slider">
+          <widget class="QSlider" name="slider_41">
            <property name="minimum">
             <number>0</number>
            </property>
@@ -2197,7 +2197,7 @@ color: rgb(255, 255, 0)</string>
         </layout>
        </item>
        <item row="6" column="10">
-        <widget class="QPushButton" name="Right_eyelid_go_button">
+        <widget class="QPushButton" name="button_60">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -2292,7 +2292,7 @@ color: rgb(255, 255, 0)</string>
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Right_eyebrow_speed_slider">
+          <widget class="QSlider" name="slider_71">
            <property name="minimum">
             <number>0</number>
            </property>
@@ -2329,7 +2329,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="8" column="3">
-        <widget class="QSpinBox" name="Right_eyebrow_spinbox">
+        <widget class="QSpinBox" name="spinbox_70">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
          </property>
@@ -2342,7 +2342,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="2" column="3">
-        <widget class="QSpinBox" name="Right_LR_spinbox">
+        <widget class="QSpinBox" name="spinbox_40">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
          </property>
@@ -2355,7 +2355,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="8" column="10">
-        <widget class="QPushButton" name="Right_eyebrow_go_button">
+        <widget class="QPushButton" name="button_70">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -2373,7 +2373,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="4" column="10">
-        <widget class="QPushButton" name="Right_UD_go_button">
+        <widget class="QPushButton" name="button_50">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -2391,7 +2391,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="4" column="3">
-        <widget class="QSpinBox" name="Right_UD_spinbox">
+        <widget class="QSpinBox" name="spinbox_50">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
          </property>
@@ -2417,7 +2417,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="6" column="3">
-        <widget class="QSpinBox" name="Right_eyelid_spinbox">
+        <widget class="QSpinBox" name="spinbox_60">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
          </property>
@@ -2437,7 +2437,7 @@ color: rgb(255, 255, 0)</string>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_20">
            <item>
-            <widget class="QLabel" name="label_45">
+            <widget class="QLabel" name="lab_70">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -2489,7 +2489,7 @@ color: rgb(255, 255, 0)</string>
             </spacer>
            </item>
            <item>
-            <widget class="QLabel" name="label_47">
+            <widget class="QLabel" name="lab_71">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -2504,7 +2504,7 @@ color: rgb(255, 255, 0)</string>
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Right_eyebrow_position_slider">
+          <widget class="QSlider" name="slider_70">
            <property name="minimum">
             <number>-45</number>
            </property>
@@ -2545,7 +2545,7 @@ color: rgb(255, 255, 0)</string>
         </widget>
        </item>
        <item row="6" column="8">
-        <widget class="QCheckBox" name="Right_eyelid_group_checkbox">
+        <widget class="QCheckBox" name="checkbox_60">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -2596,7 +2596,7 @@ color: rgb(255, 255, 0)</string>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_21">
            <item>
-            <widget class="QLabel" name="label_48">
+            <widget class="QLabel" name="lab_60">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -2648,7 +2648,7 @@ color: rgb(255, 255, 0)</string>
             </spacer>
            </item>
            <item>
-            <widget class="QLabel" name="label_50">
+            <widget class="QLabel" name="lab_61">
              <property name="styleSheet">
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
@@ -2663,7 +2663,7 @@ color: rgb(255, 255, 0)</string>
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Right_eyelid_position_slider">
+          <widget class="QSlider" name="slider_60">
            <property name="minimum">
             <number>-45</number>
            </property>
@@ -2742,7 +2742,7 @@ color: rgb(255, 255, 0)</string>
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Right_eyelid_speed_slider">
+          <widget class="QSlider" name="slider_61">
            <property name="minimum">
             <number>0</number>
            </property>
@@ -2843,7 +2843,7 @@ color: rgb(255, 255, 0)</string>
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="Right_UD_speed_slider">
+          <widget class="QSlider" name="slider_51">
            <property name="minimum">
             <number>0</number>
            </property>
@@ -2867,7 +2867,7 @@ color: rgb(255, 255, 0)</string>
         </layout>
        </item>
        <item row="2" column="10">
-        <widget class="QPushButton" name="Right_LR_go_button">
+        <widget class="QPushButton" name="button_40">
          <property name="font">
           <font>
            <family>Segoe UI</family>
@@ -3018,9 +3018,9 @@ color: rgb(255, 255, 0)</string>
  <resources/>
  <connections>
   <connection>
-   <sender>Left_eyelid_position_slider</sender>
+   <sender>slider_20</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Left_eyelid_spinbox</receiver>
+   <receiver>spinbox_20</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3034,9 +3034,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Left_LR_spinbox</sender>
+   <sender>spinbox_00</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Left_LR_position_slider</receiver>
+   <receiver>slider_00</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3050,9 +3050,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Left_eyebrow_position_slider</sender>
+   <sender>slider_30</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Left_eyebrow_spinbox</receiver>
+   <receiver>spinbox_30</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3066,9 +3066,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Left_LR_position_slider</sender>
+   <sender>slider_00</sender>
    <signal>sliderMoved(int)</signal>
-   <receiver>Left_LR_spinbox</receiver>
+   <receiver>spinbox_00</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3082,9 +3082,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Left_eyebrow_spinbox</sender>
+   <sender>spinbox_30</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Left_eyebrow_position_slider</receiver>
+   <receiver>slider_30</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3098,9 +3098,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Left_UD_spinbox</sender>
+   <sender>spinbox_10</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Left_UD_position_slider</receiver>
+   <receiver>slider_10</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3114,9 +3114,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Left_UD_position_slider</sender>
+   <sender>slider_10</sender>
    <signal>sliderMoved(int)</signal>
-   <receiver>Left_UD_spinbox</receiver>
+   <receiver>spinbox_10</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3130,9 +3130,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Left_eyelid_spinbox</sender>
+   <sender>spinbox_20</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Left_eyelid_position_slider</receiver>
+   <receiver>slider_20</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3152,8 +3152,8 @@ color: rgb(255, 255, 0)</string>
    <slot>open_serial_port()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>523</x>
-     <y>273</y>
+     <x>525</x>
+     <y>248</y>
     </hint>
     <hint type="destinationlabel">
      <x>617</x>
@@ -3168,8 +3168,8 @@ color: rgb(255, 255, 0)</string>
    <slot>close_serial_port()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>523</x>
-     <y>333</y>
+     <x>525</x>
+     <y>248</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
@@ -3194,9 +3194,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Right_LR_position_slider</sender>
+   <sender>slider_40</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Right_LR_spinbox</receiver>
+   <receiver>spinbox_40</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3210,9 +3210,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Right_LR_spinbox</sender>
+   <sender>spinbox_40</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Right_LR_position_slider</receiver>
+   <receiver>slider_40</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3226,9 +3226,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Right_UD_position_slider</sender>
+   <sender>slider_50</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Right_UD_spinbox</receiver>
+   <receiver>spinbox_50</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3242,9 +3242,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Right_UD_spinbox</sender>
+   <sender>spinbox_50</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Right_UD_position_slider</receiver>
+   <receiver>slider_50</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3258,9 +3258,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Right_eyelid_position_slider</sender>
+   <sender>slider_60</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Right_eyelid_spinbox</receiver>
+   <receiver>spinbox_60</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3274,9 +3274,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Right_eyelid_spinbox</sender>
+   <sender>spinbox_60</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Right_eyelid_position_slider</receiver>
+   <receiver>slider_60</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3290,9 +3290,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Right_eyebrow_position_slider</sender>
+   <sender>slider_70</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Right_eyebrow_spinbox</receiver>
+   <receiver>spinbox_70</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -3306,9 +3306,9 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>Right_eyebrow_spinbox</sender>
+   <sender>spinbox_70</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>Right_eyebrow_position_slider</receiver>
+   <receiver>slider_70</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">

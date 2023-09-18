@@ -22,13 +22,24 @@ from Command_IO import  Command_IO, ErrorCode, Joints, ServoCommands
 #     pyside6-uic form.ui -o ui_form.py, or
 #     pyside2-uic form.ui -o ui_form.py
 
+#servo_data = ((self_ui_label_11, +45, -45, 0, label_15, 0, 250, "Left/Right", "Left_Eye"),
+#              (+45, -45, 0, 0, 250, "Up/Down",    "Left_Eye"),
+#              (+45, -45, 0, 0, 250, "Eyelid",     "Left_Eye"),
+#              (+45, -45, 0, 0, 250, "Eyebrow",    "Left_Eye"),
+#              (+45, -45, 0, 0, 250, "Left/Right", "Right_Eye"),
+#              (+45, -45, 0, 0, 250, "Up/Down",    "Right_Eye"),
+#              (+45, -45, 0, 0, 250, "Eyelid",     "Right_Eye"),
+#              (+45, -45, 0, 0, 250, "Eyebrow",    "Right_Eye"),
+#              )
+
 loader = QUiLoader()                # Set up a loader object
 Command_IO = Command_IO(Ui_MainWindow)
 ErrorCode = ErrorCode
 Platform_test = Platform_test
 
 DEFAULT_PORT    =  9
-SPEED_THRESHOLD = 10
+SPEED_THRESHOLD = 21
+NOS_SERVOS      =  2
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -59,6 +70,14 @@ class MainWindow(QMainWindow):
         self.ui.statusbar.addPermanentWidget(self.platform_label)
         self.platform_label.setText("Platform : Unknown ")
 
+        servo_data = ((self.ui.lab_00, -45, self.ui.lab_01, +47, self.ui.slider_00, 0, self.ui.slider_01, 0, 250, self.ui.lab_02, "Left/Right", "Left_Eye"),
+                      (self.ui.lab_10, -45, self.ui.lab_11, +45, self.ui.slider_10, 0, self.ui.slider_11, 0, 250, self.ui.lab_12, "Up/Down", "Left_Eye"))
+
+        for index in range(NOS_SERVOS):
+            lab = servo_data[index][0]
+            servo_data[index][0].setText(str(servo_data[index][1]))
+            servo_data[index][2].setText(str(servo_data[index][3]))
+
         self.about_msg = QMessageBox(self)
         serial_port = None
         serial_baud_rate = None
@@ -68,15 +87,17 @@ class MainWindow(QMainWindow):
         Platform_test.check_platform(self)
         self.platform_label.setText("Platform: " + Platform_test.get_platform_name(self))
 
-    # route SERVO go button to a single slot with and added button code
-        self.ui.Left_LR_go_button.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_RIGHT_LEFT))
-        self.ui.Left_UD_go_button.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_UP_DOWN))
-        self.ui.Left_eyelid_go_button.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_LID))
-        self.ui.Left_eyebrow_go_button.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_BROW))
-        self.ui.Right_LR_go_button.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_UP_DOWN))
-        self.ui.Right_UD_go_button.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_LEFT_RIGHT))
-        self.ui.Right_eyelid_go_button.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_LID))
-        self.ui.Right_eyebrow_go_button.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_BROW))
+    # route SERVO go buttons to a single slot with and added button code
+        self.ui.button_00.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_RIGHT_LEFT))
+        self.ui.button_10.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_UP_DOWN))
+        self.ui.button_20.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_LID))
+        self.ui.button_30.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_BROW))
+        self.ui.button_40.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_UP_DOWN))
+        self.ui.button_50.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_LEFT_RIGHT))
+        self.ui.button_60.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_LID))
+        self.ui.button_70.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_BROW))
+
+
 
 
     def exit_program(self):
@@ -129,38 +150,38 @@ class MainWindow(QMainWindow):
     def go_button_pushed(self, joint_code):
         match joint_code:
             case Joints.LEFT_EYE_RIGHT_LEFT:
-                servo_position = self.ui.Left_LR_position_slider.value()
-                servo_speed = self.ui.Left_LR_speed_slider.value()
-                servo_group = self.ui.Left_LR_group_checkbox.isChecked()
+                servo_position = self.ui.slider_00.value()
+                servo_speed = self.ui.slider_01.value()
+                servo_group = self.ui.checkbox_00.isChecked()
             case Joints.LEFT_EYE_UP_DOWN:
-                servo_position = self.ui.Left_UD_position_slider.value()
-                servo_speed = self.ui.Left_UD_speed_slider.value()
-                servo_group = self.ui.Left_UD_group_checkbox.isChecked()
+                servo_position = self.ui.slider_10.value()
+                servo_speed = self.ui.slider_11.value()
+                servo_group = self.ui.checkbox_10.isChecked()
             case Joints.LEFT_EYE_LID:
-                servo_position = self.ui.Left_eyelid_position_slider.value()
-                servo_speed = self.ui.Left_eyelid_speed_slider.value()
-                servo_group = self.ui.Left_eyelid_group_checkbox.isChecked()
+                servo_position = self.ui.slider_20.value()
+                servo_speed = self.ui.slider_21.value()
+                servo_group = self.ui.checkbox_20.isChecked()
             case Joints.LEFT_EYE_BROW:
-                servo_position = self.ui.Left_eyebrow_position_slider.value()
-                servo_speed = self.ui.Left_eyebrow_speed_slider.value()
-                servo_group = self.ui.Left_eyebrow_group_checkbox.isChecked()
+                servo_position = self.ui.slider_30.value()
+                servo_speed = self.ui.slider_31.value()
+                servo_group = self.ui.checkbox_30.isChecked()
 
             case Joints.RIGHT_EYE_RIGHT_LEFT:
-                servo_position = self.ui.Right_LR_position_slider.value()
-                servo_speed = self.ui.Right_LR_speed_slider.value()
-                servo_group = self.ui.Right_LR_group_checkbox.isChecked()
+                servo_position = self.ui.slider_40.value()
+                servo_speed = self.ui.slider_41.value()
+                servo_group = self.ui.checkbox_40.isChecked()
             case Joints.RIGHT_EYE_UP_DOWN:
-                servo_position = self.ui.Right_UD_position_slider.value()
-                servo_speed = self.ui.Right_UD_speed_slider.value()
-                servo_group = self.ui.Right_UD_group_checkbox.isChecked()
+                servo_position = self.ui.slider_50.value()
+                servo_speed = self.ui.slider_51.value()
+                servo_group = self.ui.checkbox_50.isChecked()
             case Joints.RIGHT_EYE_LID:
-                servo_position = self.ui.Right_eyelid_position_slider.value()
-                servo_speed = self.ui.Right_eyelid_speed_slider.value()
-                servo_group = self.ui.Right_eyelid_group_checkbox.isChecked()
+                servo_position = self.ui.slider_60.value()
+                servo_speed = self.ui.slider_61.value()
+                servo_group = self.ui.checkbox_60.isChecked()
             case Joints.RIGHT_EYE_BROW:
-                servo_position = self.ui.Right_eyebrow_position_slider.value()
-                servo_speed = self.ui.Right_eyebrow_speed_slider.value()
-                servo_group = self.ui.Right_eyebrow_group_checkbox.isChecked()
+                servo_position = self.ui.slider_70.value()
+                servo_speed = self.ui.slider_71.value()
+                servo_group = self.ui.checkbox_70.isChecked()
         self.Execute_servo_cmd(joint_code, servo_position, servo_speed, servo_group)
 
 
@@ -168,11 +189,10 @@ class MainWindow(QMainWindow):
         servo_cmd = ServoCommands.ABS_MOVE
         if (group == True):
             servo_cmd = ServoCommands.ABS_MOVE_SYNC
-        cmd_string = ("servo " + DEFAULT_PORT + servo_cmd + joint + position)
         if (speed < SPEED_THRESHOLD):
-            cmd_string =("servo " + DEFAULT_PORT + servo_cmd + joint + position + "\n")
+            self.cmd_string =(f"servo {DEFAULT_PORT} {servo_cmd} {joint} {position}\n")
         else:
-            cmd_string =("servo " + DEFAULT_PORT + servo_cmd + joint + position + speed + "\n")
+            self.cmd_string =(f"servo {DEFAULT_PORT} {servo_cmd} {joint} {position} {speed}\n")
         self.log_message(self.cmd_string)
         first_val = 0
         status =  Command_IO.do_command(self.cmd_string, first_val)
