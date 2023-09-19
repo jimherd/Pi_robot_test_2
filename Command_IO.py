@@ -26,7 +26,7 @@ class Joints(IntEnum):
 
 class ErrorCode(IntEnum):
     OK                              = 0
-    LETTER_ERROR                    = -100
+    LETTER_ERROR                    = -100    # rp2040 microcontroller errors
     DOT_ERROR                       = -101
     PLUSMINUS_ERROR                 = -102
     BAD_COMMAND                     = -103
@@ -97,10 +97,13 @@ class Command_IO(QObject):
         self.ser.baudrate = baud_rate
         self.ser.timeout = self.READ_TIMEOUT
         self.ser.port = port
+        self.ser.timeout = 5
         try:
             self.ser.open()
         except:
             return ErrorCode.BAD_COMPORT_OPEN
+        self.ser.flushInput()
+        self.ser.timeout = 5
         return ErrorCode.OK
 
     def close_port(self):
@@ -114,12 +117,14 @@ class Command_IO(QObject):
         return ErrorCode.OK
 
     def get_reply(self):
-        try:
-            self.reply_string = self.ser.read_until(b'\n')
+        self.reply_string = self.ser.read_until(b'\n', 50)
+        if (len(self.reply_string) == 0):
+            return ErrorCode.BAD_COMPORT_READ
+        else:
             print("Reply received")
             return ErrorCode.OK
-        except:
-            return ErrorCode.BAD_COMPORT_READ
+
+
 
     def do_command(self, cmd_string, first_int):
         status = self.send_command(cmd_string)

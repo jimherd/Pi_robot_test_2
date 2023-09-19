@@ -70,11 +70,12 @@ class MainWindow(QMainWindow):
         self.ui.statusbar.addPermanentWidget(self.platform_label)
         self.platform_label.setText("Platform : Unknown ")
 
-        servo_data = ((self.ui.lab_00, -45, self.ui.lab_01, +47, self.ui.slider_00, 0, self.ui.slider_01, 0, 250, self.ui.lab_02, "Left/Right", "Left_Eye"),
-                      (self.ui.lab_10, -45, self.ui.lab_11, +45, self.ui.slider_10, 0, self.ui.slider_11, 0, 250, self.ui.lab_12, "Up/Down", "Left_Eye"))
-
+        servo_data = ((self.ui.lab_00, -45, self.ui.lab_01, +47, self.ui.slider_00, 0, self.ui.slider_01, 0, 250,
+                          self.ui.lab_02, "Left/Right", "Left_Eye"),
+                      (self.ui.lab_10, -45, self.ui.lab_11, +45, self.ui.slider_10, 0, self.ui.slider_11, 0, 250,
+                          self.ui.lab_12, "Up/Down", "Left_Eye"))
+    # Load servo tab with configuration data
         for index in range(NOS_SERVOS):
-            lab = servo_data[index][0]
             servo_data[index][0].setText(str(servo_data[index][1]))
             servo_data[index][2].setText(str(servo_data[index][3]))
 
@@ -182,8 +183,8 @@ class MainWindow(QMainWindow):
                 servo_position = self.ui.slider_70.value()
                 servo_speed = self.ui.slider_71.value()
                 servo_group = self.ui.checkbox_70.isChecked()
-        self.Execute_servo_cmd(joint_code, servo_position, servo_speed, servo_group)
-
+        status = self.Execute_servo_cmd(joint_code, servo_position, servo_speed, servo_group)
+        self.log_status(status)
 
     def Execute_servo_cmd(self, joint, position, speed, group):
         servo_cmd = ServoCommands.ABS_MOVE
