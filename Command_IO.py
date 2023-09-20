@@ -18,7 +18,7 @@ class Joints(IntEnum):
     LEFT_EYE_UP_DOWN     = 1
     LEFT_EYE_LID         = 2
     LEFT_EYE_BROW        = 3
-    RIGHT_EYE_LEFT_RIGHT = 4
+    RIGHT_EYE_RIGHT_LEFT = 4
     RIGHT_EYE_UP_DOWN    = 5
     RIGHT_EYE_LID        = 6
     RIGHT_EYE_BROW       = 7

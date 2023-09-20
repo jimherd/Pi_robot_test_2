@@ -39,7 +39,7 @@ Platform_test = Platform_test
 
 DEFAULT_PORT    =  9
 SPEED_THRESHOLD = 21
-NOS_SERVOS      =  2
+NOS_SERVOS      =  8
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -70,14 +70,39 @@ class MainWindow(QMainWindow):
         self.ui.statusbar.addPermanentWidget(self.platform_label)
         self.platform_label.setText("Platform : Unknown ")
 
-        servo_data = ((self.ui.lab_00, -45, self.ui.lab_01, +47, self.ui.slider_00, 0, self.ui.slider_01, 0, 250,
+        servo_data = ((self.ui.lab_00, -25, self.ui.lab_01, +25, self.ui.slider_00, 0, self.ui.slider_01, 0, 250,
                           self.ui.lab_02, "Left/Right", "Left_Eye"),
                       (self.ui.lab_10, -45, self.ui.lab_11, +45, self.ui.slider_10, 0, self.ui.slider_11, 0, 250,
-                          self.ui.lab_12, "Up/Down", "Left_Eye"))
+                          self.ui.lab_12, "Down/Up", "Left_Eye"),
+                      (self.ui.lab_20, -25, self.ui.lab_21, +25, self.ui.slider_20, 0, self.ui.slider_21, 0, 250,
+                          self.ui.lab_22, "EyeLid", "Left_Eye"),
+                      (self.ui.lab_30, -30, self.ui.lab_31, +30, self.ui.slider_30, 0, self.ui.slider_31, 0, 250,
+                          self.ui.lab_32, "EyeBrow", "Left_Eye"),
+
+                      (self.ui.lab_40, -25, self.ui.lab_41, +25, self.ui.slider_40, 0, self.ui.slider_41, 0, 250,
+                          self.ui.lab_42, "Left/Right", "Left_Eye"),
+                      (self.ui.lab_50, -45, self.ui.lab_51, +45, self.ui.slider_50, 0, self.ui.slider_51, 0, 250,
+                          self.ui.lab_52, "Down/Up", "Left_Eye"),
+                      (self.ui.lab_60, -25, self.ui.lab_61, +25, self.ui.slider_60, 0, self.ui.slider_61, 0, 250,
+                          self.ui.lab_62, "EyeLid", "Left_Eye"),
+                      (self.ui.lab_70, -30, self.ui.lab_71, +30, self.ui.slider_70, 0, self.ui.slider_71, 0, 250,
+                          self.ui.lab_72, "EyeBrow", "Left_Eye"),
+
+                          )
     # Load servo tab with configuration data
         for index in range(NOS_SERVOS):
+            # slider max/min labels
             servo_data[index][0].setText(str(servo_data[index][1]))
             servo_data[index][2].setText(str(servo_data[index][3]))
+            # position slider max/min values
+            servo_data[index][4].setMinimum(servo_data[index][1])
+            servo_data[index][4].setMaximum(servo_data[index][3])
+            # speed max/min values
+            servo_data[index][6].setMinimum(servo_data[index][7])
+            servo_data[index][6].setMaximum(servo_data[index][8])
+            # item name
+            servo_data[index][9].setText(servo_data[index][10])
+
 
         self.about_msg = QMessageBox(self)
         serial_port = None
