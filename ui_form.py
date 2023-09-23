@@ -866,434 +866,11 @@ class Ui_MainWindow(object):
         self.label_56.raise_()
         self.layoutWidget_2 = QWidget(self.run_servos_tab)
         self.layoutWidget_2.setObjectName(u"layoutWidget_2")
-        self.layoutWidget_2.setGeometry(QRect(15, 290, 759, 276))
+        self.layoutWidget_2.setGeometry(QRect(15, 290, 759, 340))
         self.layoutWidget_2.setFont(font2)
         self.gridLayout_2 = QGridLayout(self.layoutWidget_2)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.line_26 = QFrame(self.layoutWidget_2)
-        self.line_26.setObjectName(u"line_26")
-        self.line_26.setFrameShadow(QFrame.Plain)
-        self.line_26.setLineWidth(3)
-        self.line_26.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_26, 6, 7, 1, 1)
-
-        self.line_27 = QFrame(self.layoutWidget_2)
-        self.line_27.setObjectName(u"line_27")
-        self.line_27.setFrameShadow(QFrame.Plain)
-        self.line_27.setLineWidth(3)
-        self.line_27.setFrameShape(QFrame.HLine)
-
-        self.gridLayout_2.addWidget(self.line_27, 7, 0, 1, 9)
-
-        self.lab_62 = QLabel(self.layoutWidget_2)
-        self.lab_62.setObjectName(u"lab_62")
-        self.lab_62.setFont(font3)
-        self.lab_62.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
-        self.lab_62.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lab_62, 6, 0, 1, 1)
-
-        self.line_28 = QFrame(self.layoutWidget_2)
-        self.line_28.setObjectName(u"line_28")
-        self.line_28.setFrameShadow(QFrame.Plain)
-        self.line_28.setLineWidth(3)
-        self.line_28.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_28, 0, 7, 1, 1)
-
-        self.lab_72 = QLabel(self.layoutWidget_2)
-        self.lab_72.setObjectName(u"lab_72")
-        self.lab_72.setFont(font3)
-        self.lab_72.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
-        self.lab_72.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lab_72, 8, 0, 1, 1)
-
-        self.checkbox_70 = QCheckBox(self.layoutWidget_2)
-        self.checkbox_70.setObjectName(u"checkbox_70")
-        self.checkbox_70.setFont(font4)
-        self.checkbox_70.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-
-        self.gridLayout_2.addWidget(self.checkbox_70, 8, 8, 1, 1)
-
-        self.lab_52 = QLabel(self.layoutWidget_2)
-        self.lab_52.setObjectName(u"lab_52")
-        self.lab_52.setFont(font3)
-        self.lab_52.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
-        self.lab_52.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lab_52, 4, 0, 1, 1)
-
-        self.line_29 = QFrame(self.layoutWidget_2)
-        self.line_29.setObjectName(u"line_29")
-        self.line_29.setFrameShadow(QFrame.Plain)
-        self.line_29.setLineWidth(3)
-        self.line_29.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_29, 2, 4, 1, 1)
-
-        self.line_30 = QFrame(self.layoutWidget_2)
-        self.line_30.setObjectName(u"line_30")
-        self.line_30.setFrameShadow(QFrame.Plain)
-        self.line_30.setLineWidth(3)
-        self.line_30.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_30, 8, 4, 1, 1)
-
-        self.line_31 = QFrame(self.layoutWidget_2)
-        self.line_31.setObjectName(u"line_31")
-        self.line_31.setFrameShadow(QFrame.Plain)
-        self.line_31.setLineWidth(3)
-        self.line_31.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_31, 4, 7, 1, 1)
-
-        self.verticalLayout_11 = QVBoxLayout()
-        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.verticalLayout_11.setContentsMargins(-1, -1, 20, -1)
-        self.horizontalLayout_15 = QHBoxLayout()
-        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.lab_50 = QLabel(self.layoutWidget_2)
-        self.lab_50.setObjectName(u"lab_50")
-        self.lab_50.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.lab_50.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_15.addWidget(self.lab_50)
-
-        self.horizontalSpacer_18 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_15.addItem(self.horizontalSpacer_18)
-
-        self.label_34 = QLabel(self.layoutWidget_2)
-        self.label_34.setObjectName(u"label_34")
-        self.label_34.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.label_34.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_15.addWidget(self.label_34)
-
-        self.horizontalSpacer_19 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_15.addItem(self.horizontalSpacer_19)
-
-        self.lab_51 = QLabel(self.layoutWidget_2)
-        self.lab_51.setObjectName(u"lab_51")
-        self.lab_51.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.lab_51.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_15.addWidget(self.lab_51)
-
-
-        self.verticalLayout_11.addLayout(self.horizontalLayout_15)
-
-        self.slider_50 = QSlider(self.layoutWidget_2)
-        self.slider_50.setObjectName(u"slider_50")
-        self.slider_50.setMinimum(-45)
-        self.slider_50.setMaximum(45)
-        self.slider_50.setOrientation(Qt.Horizontal)
-
-        self.verticalLayout_11.addWidget(self.slider_50)
-
-
-        self.gridLayout_2.addLayout(self.verticalLayout_11, 4, 2, 1, 1)
-
-        self.line_32 = QFrame(self.layoutWidget_2)
-        self.line_32.setObjectName(u"line_32")
-        self.line_32.setFrameShadow(QFrame.Plain)
-        self.line_32.setLineWidth(3)
-        self.line_32.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_32, 2, 1, 1, 1)
-
-        self.checkbox_50 = QCheckBox(self.layoutWidget_2)
-        self.checkbox_50.setObjectName(u"checkbox_50")
-        self.checkbox_50.setFont(font4)
-        self.checkbox_50.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-
-        self.gridLayout_2.addWidget(self.checkbox_50, 4, 8, 1, 1)
-
-        self.label_36 = QLabel(self.layoutWidget_2)
-        self.label_36.setObjectName(u"label_36")
-        self.label_36.setFont(font3)
-        self.label_36.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
-        self.label_36.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.label_36, 0, 2, 1, 1)
-
-        self.verticalLayout_12 = QVBoxLayout()
-        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
-        self.verticalLayout_12.setContentsMargins(-1, -1, 20, -1)
-        self.horizontalLayout_16 = QHBoxLayout()
-        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
-        self.lab_40 = QLabel(self.layoutWidget_2)
-        self.lab_40.setObjectName(u"lab_40")
-        self.lab_40.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.lab_40.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_16.addWidget(self.lab_40)
-
-        self.horizontalSpacer_20 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_16.addItem(self.horizontalSpacer_20)
-
-        self.label_38 = QLabel(self.layoutWidget_2)
-        self.label_38.setObjectName(u"label_38")
-        self.label_38.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.label_38.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_16.addWidget(self.label_38)
-
-        self.horizontalSpacer_21 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_16.addItem(self.horizontalSpacer_21)
-
-        self.lab_41 = QLabel(self.layoutWidget_2)
-        self.lab_41.setObjectName(u"lab_41")
-        self.lab_41.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.lab_41.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_16.addWidget(self.lab_41)
-
-
-        self.verticalLayout_12.addLayout(self.horizontalLayout_16)
-
-        self.slider_40 = QSlider(self.layoutWidget_2)
-        self.slider_40.setObjectName(u"slider_40")
-        self.slider_40.setMinimum(-60)
-        self.slider_40.setMaximum(60)
-        self.slider_40.setOrientation(Qt.Horizontal)
-
-        self.verticalLayout_12.addWidget(self.slider_40)
-
-
-        self.gridLayout_2.addLayout(self.verticalLayout_12, 2, 2, 1, 1)
-
-        self.line_33 = QFrame(self.layoutWidget_2)
-        self.line_33.setObjectName(u"line_33")
-        self.line_33.setFrameShadow(QFrame.Plain)
-        self.line_33.setLineWidth(3)
-        self.line_33.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_33, 4, 1, 1, 1)
-
-        self.line_34 = QFrame(self.layoutWidget_2)
-        self.line_34.setObjectName(u"line_34")
-        self.line_34.setFrameShadow(QFrame.Plain)
-        self.line_34.setLineWidth(3)
-        self.line_34.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_34, 0, 4, 1, 1)
-
-        self.line_35 = QFrame(self.layoutWidget_2)
-        self.line_35.setObjectName(u"line_35")
-        self.line_35.setFrameShadow(QFrame.Plain)
-        self.line_35.setLineWidth(3)
-        self.line_35.setFrameShape(QFrame.HLine)
-
-        self.gridLayout_2.addWidget(self.line_35, 5, 0, 1, 11)
-
-        self.line_36 = QFrame(self.layoutWidget_2)
-        self.line_36.setObjectName(u"line_36")
-        self.line_36.setFrameShadow(QFrame.Plain)
-        self.line_36.setLineWidth(3)
-        self.line_36.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_36, 0, 1, 1, 1)
-
-        self.checkbox_40 = QCheckBox(self.layoutWidget_2)
-        self.checkbox_40.setObjectName(u"checkbox_40")
-        self.checkbox_40.setFont(font4)
-        self.checkbox_40.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-
-        self.gridLayout_2.addWidget(self.checkbox_40, 2, 8, 1, 1)
-
-        self.horizontalLayout_17 = QHBoxLayout()
-        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
-        self.lab_42 = QLabel(self.layoutWidget_2)
-        self.lab_42.setObjectName(u"lab_42")
-        self.lab_42.setFont(font3)
-        self.lab_42.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
-        self.lab_42.setAlignment(Qt.AlignCenter)
-
-        self.horizontalLayout_17.addWidget(self.lab_42)
-
-        self.line_37 = QFrame(self.layoutWidget_2)
-        self.line_37.setObjectName(u"line_37")
-        self.line_37.setFrameShadow(QFrame.Plain)
-        self.line_37.setLineWidth(3)
-        self.line_37.setFrameShape(QFrame.HLine)
-
-        self.horizontalLayout_17.addWidget(self.line_37)
-
-
-        self.gridLayout_2.addLayout(self.horizontalLayout_17, 2, 0, 1, 1)
-
-        self.line_38 = QFrame(self.layoutWidget_2)
-        self.line_38.setObjectName(u"line_38")
-        self.line_38.setFrameShadow(QFrame.Plain)
-        self.line_38.setLineWidth(3)
-        self.line_38.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_38, 8, 9, 1, 1)
-
-        self.line_39 = QFrame(self.layoutWidget_2)
-        self.line_39.setObjectName(u"line_39")
-        self.line_39.setFrameShadow(QFrame.Plain)
-        self.line_39.setLineWidth(3)
-        self.line_39.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_39, 2, 7, 1, 1)
-
-        self.verticalLayout_13 = QVBoxLayout()
-        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.verticalLayout_13.setContentsMargins(20, -1, 20, -1)
-        self.horizontalLayout_18 = QHBoxLayout()
-        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
-        self.label_41 = QLabel(self.layoutWidget_2)
-        self.label_41.setObjectName(u"label_41")
-        self.label_41.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.label_41.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_18.addWidget(self.label_41)
-
-        self.horizontalSpacer_22 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_18.addItem(self.horizontalSpacer_22)
-
-        self.label_42 = QLabel(self.layoutWidget_2)
-        self.label_42.setObjectName(u"label_42")
-        self.label_42.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.label_42.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_18.addWidget(self.label_42)
-
-
-        self.verticalLayout_13.addLayout(self.horizontalLayout_18)
-
-        self.slider_41 = QSlider(self.layoutWidget_2)
-        self.slider_41.setObjectName(u"slider_41")
-        self.slider_41.setMinimum(0)
-        self.slider_41.setMaximum(250)
-        self.slider_41.setSingleStep(5)
-        self.slider_41.setOrientation(Qt.Horizontal)
-        self.slider_41.setInvertedAppearance(False)
-        self.slider_41.setInvertedControls(False)
-
-        self.verticalLayout_13.addWidget(self.slider_41)
-
-
-        self.gridLayout_2.addLayout(self.verticalLayout_13, 2, 6, 1, 1)
-
-        self.button_60 = QPushButton(self.layoutWidget_2)
-        self.button_60.setObjectName(u"button_60")
-        self.button_60.setFont(font4)
-        self.button_60.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-
-        self.gridLayout_2.addWidget(self.button_60, 6, 10, 1, 1)
-
-        self.line_40 = QFrame(self.layoutWidget_2)
-        self.line_40.setObjectName(u"line_40")
-        self.line_40.setFrameShadow(QFrame.Plain)
-        self.line_40.setLineWidth(3)
-        self.line_40.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_40, 8, 7, 1, 1)
-
-        self.line_41 = QFrame(self.layoutWidget_2)
-        self.line_41.setObjectName(u"line_41")
-        self.line_41.setFrameShadow(QFrame.Plain)
-        self.line_41.setLineWidth(3)
-        self.line_41.setFrameShape(QFrame.HLine)
-
-        self.gridLayout_2.addWidget(self.line_41, 3, 0, 1, 11)
-
-        self.verticalLayout_14 = QVBoxLayout()
-        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
-        self.verticalLayout_14.setContentsMargins(20, -1, 20, -1)
-        self.horizontalLayout_19 = QHBoxLayout()
-        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
-        self.label_43 = QLabel(self.layoutWidget_2)
-        self.label_43.setObjectName(u"label_43")
-        self.label_43.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.label_43.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_19.addWidget(self.label_43)
-
-        self.horizontalSpacer_23 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_19.addItem(self.horizontalSpacer_23)
-
-        self.label_44 = QLabel(self.layoutWidget_2)
-        self.label_44.setObjectName(u"label_44")
-        self.label_44.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.label_44.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_19.addWidget(self.label_44)
-
-
-        self.verticalLayout_14.addLayout(self.horizontalLayout_19)
-
-        self.slider_71 = QSlider(self.layoutWidget_2)
-        self.slider_71.setObjectName(u"slider_71")
-        self.slider_71.setMinimum(0)
-        self.slider_71.setMaximum(250)
-        self.slider_71.setSingleStep(5)
-        self.slider_71.setOrientation(Qt.Horizontal)
-        self.slider_71.setInvertedAppearance(False)
-        self.slider_71.setInvertedControls(False)
-
-        self.verticalLayout_14.addWidget(self.slider_71)
-
-
-        self.gridLayout_2.addLayout(self.verticalLayout_14, 8, 6, 1, 1)
-
-        self.line_42 = QFrame(self.layoutWidget_2)
-        self.line_42.setObjectName(u"line_42")
-        self.line_42.setFrameShadow(QFrame.Plain)
-        self.line_42.setLineWidth(3)
-        self.line_42.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_42, 6, 9, 1, 1)
-
-        self.spinbox_70 = QSpinBox(self.layoutWidget_2)
-        self.spinbox_70.setObjectName(u"spinbox_70")
-        self.spinbox_70.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-        self.spinbox_70.setMinimum(-45)
-        self.spinbox_70.setMaximum(45)
-
-        self.gridLayout_2.addWidget(self.spinbox_70, 8, 3, 1, 1)
-
-        self.spinbox_40 = QSpinBox(self.layoutWidget_2)
-        self.spinbox_40.setObjectName(u"spinbox_40")
-        self.spinbox_40.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-        self.spinbox_40.setMinimum(-60)
-        self.spinbox_40.setMaximum(60)
-
-        self.gridLayout_2.addWidget(self.spinbox_40, 2, 3, 1, 1)
-
-        self.button_70 = QPushButton(self.layoutWidget_2)
-        self.button_70.setObjectName(u"button_70")
-        self.button_70.setFont(font4)
-        self.button_70.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-
-        self.gridLayout_2.addWidget(self.button_70, 8, 10, 1, 1)
-
-        self.button_50 = QPushButton(self.layoutWidget_2)
-        self.button_50.setObjectName(u"button_50")
-        self.button_50.setFont(font4)
-        self.button_50.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-
-        self.gridLayout_2.addWidget(self.button_50, 4, 10, 1, 1)
-
-        self.spinbox_50 = QSpinBox(self.layoutWidget_2)
-        self.spinbox_50.setObjectName(u"spinbox_50")
-        self.spinbox_50.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-        self.spinbox_50.setMinimum(-45)
-        self.spinbox_50.setMaximum(45)
-
-        self.gridLayout_2.addWidget(self.spinbox_50, 4, 3, 1, 1)
-
         self.line_43 = QFrame(self.layoutWidget_2)
         self.line_43.setObjectName(u"line_43")
         self.line_43.setFrameShadow(QFrame.Plain)
@@ -1301,101 +878,6 @@ class Ui_MainWindow(object):
         self.line_43.setFrameShape(QFrame.VLine)
 
         self.gridLayout_2.addWidget(self.line_43, 2, 9, 1, 1)
-
-        self.spinbox_60 = QSpinBox(self.layoutWidget_2)
-        self.spinbox_60.setObjectName(u"spinbox_60")
-        self.spinbox_60.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-        self.spinbox_60.setMinimum(-45)
-        self.spinbox_60.setMaximum(45)
-
-        self.gridLayout_2.addWidget(self.spinbox_60, 6, 3, 1, 1)
-
-        self.verticalLayout_15 = QVBoxLayout()
-        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
-        self.verticalLayout_15.setContentsMargins(-1, -1, 20, -1)
-        self.horizontalLayout_20 = QHBoxLayout()
-        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
-        self.lab_70 = QLabel(self.layoutWidget_2)
-        self.lab_70.setObjectName(u"lab_70")
-        self.lab_70.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.lab_70.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_20.addWidget(self.lab_70)
-
-        self.horizontalSpacer_24 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_20.addItem(self.horizontalSpacer_24)
-
-        self.label_46 = QLabel(self.layoutWidget_2)
-        self.label_46.setObjectName(u"label_46")
-        self.label_46.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.label_46.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_20.addWidget(self.label_46)
-
-        self.horizontalSpacer_25 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_20.addItem(self.horizontalSpacer_25)
-
-        self.lab_71 = QLabel(self.layoutWidget_2)
-        self.lab_71.setObjectName(u"lab_71")
-        self.lab_71.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.lab_71.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_20.addWidget(self.lab_71)
-
-
-        self.verticalLayout_15.addLayout(self.horizontalLayout_20)
-
-        self.slider_70 = QSlider(self.layoutWidget_2)
-        self.slider_70.setObjectName(u"slider_70")
-        self.slider_70.setMinimum(-45)
-        self.slider_70.setMaximum(45)
-        self.slider_70.setOrientation(Qt.Horizontal)
-
-        self.verticalLayout_15.addWidget(self.slider_70)
-
-
-        self.gridLayout_2.addLayout(self.verticalLayout_15, 8, 2, 1, 1)
-
-        self.line_44 = QFrame(self.layoutWidget_2)
-        self.line_44.setObjectName(u"line_44")
-        self.line_44.setFrameShadow(QFrame.Plain)
-        self.line_44.setLineWidth(3)
-        self.line_44.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_44, 4, 9, 1, 1)
-
-        self.line_45 = QFrame(self.layoutWidget_2)
-        self.line_45.setObjectName(u"line_45")
-        self.line_45.setFrameShadow(QFrame.Plain)
-        self.line_45.setLineWidth(3)
-        self.line_45.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_45, 4, 4, 1, 1)
-
-        self.checkbox_60 = QCheckBox(self.layoutWidget_2)
-        self.checkbox_60.setObjectName(u"checkbox_60")
-        self.checkbox_60.setFont(font4)
-        self.checkbox_60.setStyleSheet(u"font: 12pt \"Segoe UI\";")
-
-        self.gridLayout_2.addWidget(self.checkbox_60, 6, 8, 1, 1)
-
-        self.line_46 = QFrame(self.layoutWidget_2)
-        self.line_46.setObjectName(u"line_46")
-        self.line_46.setFrameShadow(QFrame.Plain)
-        self.line_46.setLineWidth(3)
-        self.line_46.setFrameShape(QFrame.HLine)
-
-        self.gridLayout_2.addWidget(self.line_46, 1, 0, 1, 11)
-
-        self.line_47 = QFrame(self.layoutWidget_2)
-        self.line_47.setObjectName(u"line_47")
-        self.line_47.setFrameShadow(QFrame.Plain)
-        self.line_47.setLineWidth(3)
-        self.line_47.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_47, 8, 1, 1, 1)
 
         self.verticalLayout_16 = QVBoxLayout()
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
@@ -1445,69 +927,61 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addLayout(self.verticalLayout_16, 6, 2, 1, 1)
 
-        self.line_48 = QFrame(self.layoutWidget_2)
-        self.line_48.setObjectName(u"line_48")
-        self.line_48.setFrameShadow(QFrame.Plain)
-        self.line_48.setLineWidth(3)
-        self.line_48.setFrameShape(QFrame.VLine)
+        self.line_54 = QFrame(self.layoutWidget_2)
+        self.line_54.setObjectName(u"line_54")
+        self.line_54.setFrameShadow(QFrame.Plain)
+        self.line_54.setLineWidth(3)
+        self.line_54.setFrameShape(QFrame.VLine)
 
-        self.gridLayout_2.addWidget(self.line_48, 6, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.line_54, 11, 1, 1, 1)
 
-        self.verticalLayout_17 = QVBoxLayout()
-        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
-        self.verticalLayout_17.setContentsMargins(20, -1, 20, -1)
-        self.horizontalLayout_22 = QHBoxLayout()
-        self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
-        self.label_51 = QLabel(self.layoutWidget_2)
-        self.label_51.setObjectName(u"label_51")
-        self.label_51.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.label_51.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.line_33 = QFrame(self.layoutWidget_2)
+        self.line_33.setObjectName(u"line_33")
+        self.line_33.setFrameShadow(QFrame.Plain)
+        self.line_33.setLineWidth(3)
+        self.line_33.setFrameShape(QFrame.VLine)
 
-        self.horizontalLayout_22.addWidget(self.label_51)
+        self.gridLayout_2.addWidget(self.line_33, 4, 1, 1, 1)
 
-        self.horizontalSpacer_28 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.line_39 = QFrame(self.layoutWidget_2)
+        self.line_39.setObjectName(u"line_39")
+        self.line_39.setFrameShadow(QFrame.Plain)
+        self.line_39.setLineWidth(3)
+        self.line_39.setFrameShape(QFrame.VLine)
 
-        self.horizontalLayout_22.addItem(self.horizontalSpacer_28)
+        self.gridLayout_2.addWidget(self.line_39, 2, 7, 1, 1)
 
-        self.label_52 = QLabel(self.layoutWidget_2)
-        self.label_52.setObjectName(u"label_52")
-        self.label_52.setStyleSheet(u"font: 9pt \"Segoe UI\";")
-        self.label_52.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.line_42 = QFrame(self.layoutWidget_2)
+        self.line_42.setObjectName(u"line_42")
+        self.line_42.setFrameShadow(QFrame.Plain)
+        self.line_42.setLineWidth(3)
+        self.line_42.setFrameShape(QFrame.VLine)
 
-        self.horizontalLayout_22.addWidget(self.label_52)
+        self.gridLayout_2.addWidget(self.line_42, 6, 9, 1, 1)
 
+        self.label_57 = QLabel(self.layoutWidget_2)
+        self.label_57.setObjectName(u"label_57")
+        self.label_57.setFont(font5)
+        self.label_57.setStyleSheet(u"font: 700 14pt \"Segoe UI\";\n"
+"color: rgb(255, 255, 0)")
+        self.label_57.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_17.addLayout(self.horizontalLayout_22)
+        self.gridLayout_2.addWidget(self.label_57, 0, 0, 1, 1)
 
-        self.slider_61 = QSlider(self.layoutWidget_2)
-        self.slider_61.setObjectName(u"slider_61")
-        self.slider_61.setMinimum(0)
-        self.slider_61.setMaximum(250)
-        self.slider_61.setSingleStep(5)
-        self.slider_61.setOrientation(Qt.Horizontal)
-        self.slider_61.setInvertedAppearance(False)
-        self.slider_61.setInvertedControls(False)
+        self.line_32 = QFrame(self.layoutWidget_2)
+        self.line_32.setObjectName(u"line_32")
+        self.line_32.setFrameShadow(QFrame.Plain)
+        self.line_32.setLineWidth(3)
+        self.line_32.setFrameShape(QFrame.VLine)
 
-        self.verticalLayout_17.addWidget(self.slider_61)
+        self.gridLayout_2.addWidget(self.line_32, 2, 1, 1, 1)
 
+        self.button_40 = QPushButton(self.layoutWidget_2)
+        self.button_40.setObjectName(u"button_40")
+        self.button_40.setFont(font4)
+        self.button_40.setStyleSheet(u"font: 12pt \"Segoe UI\";")
 
-        self.gridLayout_2.addLayout(self.verticalLayout_17, 6, 6, 1, 1)
-
-        self.line_49 = QFrame(self.layoutWidget_2)
-        self.line_49.setObjectName(u"line_49")
-        self.line_49.setFrameShadow(QFrame.Plain)
-        self.line_49.setLineWidth(3)
-        self.line_49.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_49, 0, 9, 1, 1)
-
-        self.line_50 = QFrame(self.layoutWidget_2)
-        self.line_50.setObjectName(u"line_50")
-        self.line_50.setFrameShadow(QFrame.Plain)
-        self.line_50.setLineWidth(3)
-        self.line_50.setFrameShape(QFrame.VLine)
-
-        self.gridLayout_2.addWidget(self.line_50, 6, 4, 1, 1)
+        self.gridLayout_2.addWidget(self.button_40, 2, 10, 1, 1)
 
         self.verticalLayout_18 = QVBoxLayout()
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
@@ -1549,12 +1023,48 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addLayout(self.verticalLayout_18, 4, 6, 1, 1)
 
-        self.button_40 = QPushButton(self.layoutWidget_2)
-        self.button_40.setObjectName(u"button_40")
-        self.button_40.setFont(font4)
-        self.button_40.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+        self.lab_72 = QLabel(self.layoutWidget_2)
+        self.lab_72.setObjectName(u"lab_72")
+        self.lab_72.setFont(font3)
+        self.lab_72.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
+        self.lab_72.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout_2.addWidget(self.button_40, 2, 10, 1, 1)
+        self.gridLayout_2.addWidget(self.lab_72, 8, 0, 1, 1)
+
+        self.horizontalLayout_17 = QHBoxLayout()
+        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.lab_42 = QLabel(self.layoutWidget_2)
+        self.lab_42.setObjectName(u"lab_42")
+        self.lab_42.setFont(font3)
+        self.lab_42.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
+        self.lab_42.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_17.addWidget(self.lab_42)
+
+        self.line_37 = QFrame(self.layoutWidget_2)
+        self.line_37.setObjectName(u"line_37")
+        self.line_37.setFrameShadow(QFrame.Plain)
+        self.line_37.setLineWidth(3)
+        self.line_37.setFrameShape(QFrame.HLine)
+
+        self.horizontalLayout_17.addWidget(self.line_37)
+
+
+        self.gridLayout_2.addLayout(self.horizontalLayout_17, 2, 0, 1, 1)
+
+        self.button_70 = QPushButton(self.layoutWidget_2)
+        self.button_70.setObjectName(u"button_70")
+        self.button_70.setFont(font4)
+        self.button_70.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.gridLayout_2.addWidget(self.button_70, 8, 10, 1, 1)
+
+        self.checkbox_60 = QCheckBox(self.layoutWidget_2)
+        self.checkbox_60.setObjectName(u"checkbox_60")
+        self.checkbox_60.setFont(font4)
+        self.checkbox_60.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.gridLayout_2.addWidget(self.checkbox_60, 6, 8, 1, 1)
 
         self.label_55 = QLabel(self.layoutWidget_2)
         self.label_55.setObjectName(u"label_55")
@@ -1564,14 +1074,581 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_55, 0, 6, 1, 1)
 
-        self.label_57 = QLabel(self.layoutWidget_2)
-        self.label_57.setObjectName(u"label_57")
-        self.label_57.setFont(font5)
-        self.label_57.setStyleSheet(u"font: 700 14pt \"Segoe UI\";\n"
-"color: rgb(255, 255, 0)")
-        self.label_57.setAlignment(Qt.AlignCenter)
+        self.line_41 = QFrame(self.layoutWidget_2)
+        self.line_41.setObjectName(u"line_41")
+        self.line_41.setFrameShadow(QFrame.Plain)
+        self.line_41.setLineWidth(3)
+        self.line_41.setFrameShape(QFrame.HLine)
 
-        self.gridLayout_2.addWidget(self.label_57, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.line_41, 3, 0, 1, 11)
+
+        self.line_53 = QFrame(self.layoutWidget_2)
+        self.line_53.setObjectName(u"line_53")
+        self.line_53.setFrameShadow(QFrame.Plain)
+        self.line_53.setLineWidth(3)
+        self.line_53.setFrameShape(QFrame.HLine)
+
+        self.gridLayout_2.addWidget(self.line_53, 9, 0, 1, 11)
+
+        self.verticalLayout_17 = QVBoxLayout()
+        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
+        self.verticalLayout_17.setContentsMargins(20, -1, 20, -1)
+        self.horizontalLayout_22 = QHBoxLayout()
+        self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
+        self.label_51 = QLabel(self.layoutWidget_2)
+        self.label_51.setObjectName(u"label_51")
+        self.label_51.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_51.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_22.addWidget(self.label_51)
+
+        self.horizontalSpacer_28 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_22.addItem(self.horizontalSpacer_28)
+
+        self.label_52 = QLabel(self.layoutWidget_2)
+        self.label_52.setObjectName(u"label_52")
+        self.label_52.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_52.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_22.addWidget(self.label_52)
+
+
+        self.verticalLayout_17.addLayout(self.horizontalLayout_22)
+
+        self.slider_61 = QSlider(self.layoutWidget_2)
+        self.slider_61.setObjectName(u"slider_61")
+        self.slider_61.setMinimum(0)
+        self.slider_61.setMaximum(250)
+        self.slider_61.setSingleStep(5)
+        self.slider_61.setOrientation(Qt.Horizontal)
+        self.slider_61.setInvertedAppearance(False)
+        self.slider_61.setInvertedControls(False)
+
+        self.verticalLayout_17.addWidget(self.slider_61)
+
+
+        self.gridLayout_2.addLayout(self.verticalLayout_17, 6, 6, 1, 1)
+
+        self.checkbox_40 = QCheckBox(self.layoutWidget_2)
+        self.checkbox_40.setObjectName(u"checkbox_40")
+        self.checkbox_40.setFont(font4)
+        self.checkbox_40.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.gridLayout_2.addWidget(self.checkbox_40, 2, 8, 1, 1)
+
+        self.checkbox_80 = QCheckBox(self.layoutWidget_2)
+        self.checkbox_80.setObjectName(u"checkbox_80")
+        self.checkbox_80.setFont(font4)
+        self.checkbox_80.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.gridLayout_2.addWidget(self.checkbox_80, 11, 8, 1, 1)
+
+        self.line_36 = QFrame(self.layoutWidget_2)
+        self.line_36.setObjectName(u"line_36")
+        self.line_36.setFrameShadow(QFrame.Plain)
+        self.line_36.setLineWidth(3)
+        self.line_36.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_36, 0, 1, 1, 1)
+
+        self.line_49 = QFrame(self.layoutWidget_2)
+        self.line_49.setObjectName(u"line_49")
+        self.line_49.setFrameShadow(QFrame.Plain)
+        self.line_49.setLineWidth(3)
+        self.line_49.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_49, 0, 9, 1, 1)
+
+        self.verticalLayout_14 = QVBoxLayout()
+        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.verticalLayout_14.setContentsMargins(20, -1, 20, -1)
+        self.horizontalLayout_19 = QHBoxLayout()
+        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
+        self.label_43 = QLabel(self.layoutWidget_2)
+        self.label_43.setObjectName(u"label_43")
+        self.label_43.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_43.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_19.addWidget(self.label_43)
+
+        self.horizontalSpacer_23 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_19.addItem(self.horizontalSpacer_23)
+
+        self.label_44 = QLabel(self.layoutWidget_2)
+        self.label_44.setObjectName(u"label_44")
+        self.label_44.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_44.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_19.addWidget(self.label_44)
+
+
+        self.verticalLayout_14.addLayout(self.horizontalLayout_19)
+
+        self.slider_71 = QSlider(self.layoutWidget_2)
+        self.slider_71.setObjectName(u"slider_71")
+        self.slider_71.setMinimum(0)
+        self.slider_71.setMaximum(250)
+        self.slider_71.setSingleStep(5)
+        self.slider_71.setOrientation(Qt.Horizontal)
+        self.slider_71.setInvertedAppearance(False)
+        self.slider_71.setInvertedControls(False)
+
+        self.verticalLayout_14.addWidget(self.slider_71)
+
+
+        self.gridLayout_2.addLayout(self.verticalLayout_14, 8, 6, 1, 1)
+
+        self.verticalLayout_12 = QVBoxLayout()
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.verticalLayout_12.setContentsMargins(-1, -1, 20, -1)
+        self.horizontalLayout_16 = QHBoxLayout()
+        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
+        self.lab_40 = QLabel(self.layoutWidget_2)
+        self.lab_40.setObjectName(u"lab_40")
+        self.lab_40.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.lab_40.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_16.addWidget(self.lab_40)
+
+        self.horizontalSpacer_20 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_16.addItem(self.horizontalSpacer_20)
+
+        self.label_38 = QLabel(self.layoutWidget_2)
+        self.label_38.setObjectName(u"label_38")
+        self.label_38.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_38.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_16.addWidget(self.label_38)
+
+        self.horizontalSpacer_21 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_16.addItem(self.horizontalSpacer_21)
+
+        self.lab_41 = QLabel(self.layoutWidget_2)
+        self.lab_41.setObjectName(u"lab_41")
+        self.lab_41.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.lab_41.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_16.addWidget(self.lab_41)
+
+
+        self.verticalLayout_12.addLayout(self.horizontalLayout_16)
+
+        self.slider_40 = QSlider(self.layoutWidget_2)
+        self.slider_40.setObjectName(u"slider_40")
+        self.slider_40.setMinimum(-60)
+        self.slider_40.setMaximum(60)
+        self.slider_40.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_12.addWidget(self.slider_40)
+
+
+        self.gridLayout_2.addLayout(self.verticalLayout_12, 2, 2, 1, 1)
+
+        self.button_50 = QPushButton(self.layoutWidget_2)
+        self.button_50.setObjectName(u"button_50")
+        self.button_50.setFont(font4)
+        self.button_50.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.gridLayout_2.addWidget(self.button_50, 4, 10, 1, 1)
+
+        self.line_45 = QFrame(self.layoutWidget_2)
+        self.line_45.setObjectName(u"line_45")
+        self.line_45.setFrameShadow(QFrame.Plain)
+        self.line_45.setLineWidth(3)
+        self.line_45.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_45, 4, 4, 1, 1)
+
+        self.line_50 = QFrame(self.layoutWidget_2)
+        self.line_50.setObjectName(u"line_50")
+        self.line_50.setFrameShadow(QFrame.Plain)
+        self.line_50.setLineWidth(3)
+        self.line_50.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_50, 6, 4, 1, 1)
+
+        self.spinbox_50 = QSpinBox(self.layoutWidget_2)
+        self.spinbox_50.setObjectName(u"spinbox_50")
+        self.spinbox_50.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+        self.spinbox_50.setMinimum(-45)
+        self.spinbox_50.setMaximum(45)
+
+        self.gridLayout_2.addWidget(self.spinbox_50, 4, 3, 1, 1)
+
+        self.spinbox_70 = QSpinBox(self.layoutWidget_2)
+        self.spinbox_70.setObjectName(u"spinbox_70")
+        self.spinbox_70.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+        self.spinbox_70.setMinimum(-45)
+        self.spinbox_70.setMaximum(45)
+
+        self.gridLayout_2.addWidget(self.spinbox_70, 8, 3, 1, 1)
+
+        self.line_46 = QFrame(self.layoutWidget_2)
+        self.line_46.setObjectName(u"line_46")
+        self.line_46.setFrameShadow(QFrame.Plain)
+        self.line_46.setLineWidth(3)
+        self.line_46.setFrameShape(QFrame.HLine)
+
+        self.gridLayout_2.addWidget(self.line_46, 1, 0, 1, 11)
+
+        self.checkbox_70 = QCheckBox(self.layoutWidget_2)
+        self.checkbox_70.setObjectName(u"checkbox_70")
+        self.checkbox_70.setFont(font4)
+        self.checkbox_70.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.gridLayout_2.addWidget(self.checkbox_70, 8, 8, 1, 1)
+
+        self.checkbox_50 = QCheckBox(self.layoutWidget_2)
+        self.checkbox_50.setObjectName(u"checkbox_50")
+        self.checkbox_50.setFont(font4)
+        self.checkbox_50.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.gridLayout_2.addWidget(self.checkbox_50, 4, 8, 1, 1)
+
+        self.line_31 = QFrame(self.layoutWidget_2)
+        self.line_31.setObjectName(u"line_31")
+        self.line_31.setFrameShadow(QFrame.Plain)
+        self.line_31.setLineWidth(3)
+        self.line_31.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_31, 4, 7, 1, 1)
+
+        self.lab_62 = QLabel(self.layoutWidget_2)
+        self.lab_62.setObjectName(u"lab_62")
+        self.lab_62.setFont(font3)
+        self.lab_62.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
+        self.lab_62.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lab_62, 6, 0, 1, 1)
+
+        self.verticalLayout_13 = QVBoxLayout()
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.verticalLayout_13.setContentsMargins(20, -1, 20, -1)
+        self.horizontalLayout_18 = QHBoxLayout()
+        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
+        self.label_41 = QLabel(self.layoutWidget_2)
+        self.label_41.setObjectName(u"label_41")
+        self.label_41.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_41.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_18.addWidget(self.label_41)
+
+        self.horizontalSpacer_22 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_18.addItem(self.horizontalSpacer_22)
+
+        self.label_42 = QLabel(self.layoutWidget_2)
+        self.label_42.setObjectName(u"label_42")
+        self.label_42.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_42.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_18.addWidget(self.label_42)
+
+
+        self.verticalLayout_13.addLayout(self.horizontalLayout_18)
+
+        self.slider_41 = QSlider(self.layoutWidget_2)
+        self.slider_41.setObjectName(u"slider_41")
+        self.slider_41.setMinimum(0)
+        self.slider_41.setMaximum(250)
+        self.slider_41.setSingleStep(5)
+        self.slider_41.setOrientation(Qt.Horizontal)
+        self.slider_41.setInvertedAppearance(False)
+        self.slider_41.setInvertedControls(False)
+
+        self.verticalLayout_13.addWidget(self.slider_41)
+
+
+        self.gridLayout_2.addLayout(self.verticalLayout_13, 2, 6, 1, 1)
+
+        self.verticalLayout_11 = QVBoxLayout()
+        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
+        self.verticalLayout_11.setContentsMargins(-1, -1, 20, -1)
+        self.horizontalLayout_15 = QHBoxLayout()
+        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
+        self.lab_50 = QLabel(self.layoutWidget_2)
+        self.lab_50.setObjectName(u"lab_50")
+        self.lab_50.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.lab_50.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_15.addWidget(self.lab_50)
+
+        self.horizontalSpacer_18 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_15.addItem(self.horizontalSpacer_18)
+
+        self.label_34 = QLabel(self.layoutWidget_2)
+        self.label_34.setObjectName(u"label_34")
+        self.label_34.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_34.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_15.addWidget(self.label_34)
+
+        self.horizontalSpacer_19 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_15.addItem(self.horizontalSpacer_19)
+
+        self.lab_51 = QLabel(self.layoutWidget_2)
+        self.lab_51.setObjectName(u"lab_51")
+        self.lab_51.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.lab_51.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_15.addWidget(self.lab_51)
+
+
+        self.verticalLayout_11.addLayout(self.horizontalLayout_15)
+
+        self.slider_50 = QSlider(self.layoutWidget_2)
+        self.slider_50.setObjectName(u"slider_50")
+        self.slider_50.setMinimum(-45)
+        self.slider_50.setMaximum(45)
+        self.slider_50.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_11.addWidget(self.slider_50)
+
+
+        self.gridLayout_2.addLayout(self.verticalLayout_11, 4, 2, 1, 1)
+
+        self.line_34 = QFrame(self.layoutWidget_2)
+        self.line_34.setObjectName(u"line_34")
+        self.line_34.setFrameShadow(QFrame.Plain)
+        self.line_34.setLineWidth(3)
+        self.line_34.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_34, 0, 4, 1, 1)
+
+        self.lab_52 = QLabel(self.layoutWidget_2)
+        self.lab_52.setObjectName(u"lab_52")
+        self.lab_52.setFont(font3)
+        self.lab_52.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
+        self.lab_52.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lab_52, 4, 0, 1, 1)
+
+        self.line_29 = QFrame(self.layoutWidget_2)
+        self.line_29.setObjectName(u"line_29")
+        self.line_29.setFrameShadow(QFrame.Plain)
+        self.line_29.setLineWidth(3)
+        self.line_29.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_29, 2, 4, 1, 1)
+
+        self.line_48 = QFrame(self.layoutWidget_2)
+        self.line_48.setObjectName(u"line_48")
+        self.line_48.setFrameShadow(QFrame.Plain)
+        self.line_48.setLineWidth(3)
+        self.line_48.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_48, 6, 1, 1, 1)
+
+        self.verticalLayout_15 = QVBoxLayout()
+        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
+        self.verticalLayout_15.setContentsMargins(-1, -1, 20, -1)
+        self.horizontalLayout_20 = QHBoxLayout()
+        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
+        self.lab_70 = QLabel(self.layoutWidget_2)
+        self.lab_70.setObjectName(u"lab_70")
+        self.lab_70.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.lab_70.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_20.addWidget(self.lab_70)
+
+        self.horizontalSpacer_24 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_20.addItem(self.horizontalSpacer_24)
+
+        self.label_46 = QLabel(self.layoutWidget_2)
+        self.label_46.setObjectName(u"label_46")
+        self.label_46.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_46.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_20.addWidget(self.label_46)
+
+        self.horizontalSpacer_25 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_20.addItem(self.horizontalSpacer_25)
+
+        self.lab_71 = QLabel(self.layoutWidget_2)
+        self.lab_71.setObjectName(u"lab_71")
+        self.lab_71.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.lab_71.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_20.addWidget(self.lab_71)
+
+
+        self.verticalLayout_15.addLayout(self.horizontalLayout_20)
+
+        self.slider_70 = QSlider(self.layoutWidget_2)
+        self.slider_70.setObjectName(u"slider_70")
+        self.slider_70.setMinimum(-45)
+        self.slider_70.setMaximum(45)
+        self.slider_70.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_15.addWidget(self.slider_70)
+
+
+        self.gridLayout_2.addLayout(self.verticalLayout_15, 8, 2, 1, 1)
+
+        self.line_27 = QFrame(self.layoutWidget_2)
+        self.line_27.setObjectName(u"line_27")
+        self.line_27.setFrameShadow(QFrame.Plain)
+        self.line_27.setLineWidth(3)
+        self.line_27.setFrameShape(QFrame.HLine)
+
+        self.gridLayout_2.addWidget(self.line_27, 7, 0, 1, 11)
+
+        self.line_26 = QFrame(self.layoutWidget_2)
+        self.line_26.setObjectName(u"line_26")
+        self.line_26.setFrameShadow(QFrame.Plain)
+        self.line_26.setLineWidth(3)
+        self.line_26.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_26, 6, 7, 1, 1)
+
+        self.button_60 = QPushButton(self.layoutWidget_2)
+        self.button_60.setObjectName(u"button_60")
+        self.button_60.setFont(font4)
+        self.button_60.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.gridLayout_2.addWidget(self.button_60, 6, 10, 1, 1)
+
+        self.label_2 = QLabel(self.layoutWidget_2)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
+        self.label_2.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.label_2, 11, 0, 1, 1)
+
+        self.spinbox_60 = QSpinBox(self.layoutWidget_2)
+        self.spinbox_60.setObjectName(u"spinbox_60")
+        self.spinbox_60.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+        self.spinbox_60.setMinimum(-45)
+        self.spinbox_60.setMaximum(45)
+
+        self.gridLayout_2.addWidget(self.spinbox_60, 6, 3, 1, 1)
+
+        self.spinbox_40 = QSpinBox(self.layoutWidget_2)
+        self.spinbox_40.setObjectName(u"spinbox_40")
+        self.spinbox_40.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+        self.spinbox_40.setMinimum(-60)
+        self.spinbox_40.setMaximum(60)
+
+        self.gridLayout_2.addWidget(self.spinbox_40, 2, 3, 1, 1)
+
+        self.line_38 = QFrame(self.layoutWidget_2)
+        self.line_38.setObjectName(u"line_38")
+        self.line_38.setFrameShadow(QFrame.Plain)
+        self.line_38.setLineWidth(3)
+        self.line_38.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_38, 8, 9, 1, 1)
+
+        self.label_36 = QLabel(self.layoutWidget_2)
+        self.label_36.setObjectName(u"label_36")
+        self.label_36.setFont(font3)
+        self.label_36.setStyleSheet(u"font: 700 12pt \"Segoe UI\";")
+        self.label_36.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.label_36, 0, 2, 1, 1)
+
+        self.line_44 = QFrame(self.layoutWidget_2)
+        self.line_44.setObjectName(u"line_44")
+        self.line_44.setFrameShadow(QFrame.Plain)
+        self.line_44.setLineWidth(3)
+        self.line_44.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_44, 4, 9, 1, 1)
+
+        self.button_80 = QPushButton(self.layoutWidget_2)
+        self.button_80.setObjectName(u"button_80")
+        self.button_80.setFont(font4)
+        self.button_80.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.gridLayout_2.addWidget(self.button_80, 11, 10, 1, 1)
+
+        self.line_28 = QFrame(self.layoutWidget_2)
+        self.line_28.setObjectName(u"line_28")
+        self.line_28.setFrameShadow(QFrame.Plain)
+        self.line_28.setLineWidth(3)
+        self.line_28.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_28, 0, 7, 1, 1)
+
+        self.line_30 = QFrame(self.layoutWidget_2)
+        self.line_30.setObjectName(u"line_30")
+        self.line_30.setFrameShadow(QFrame.Plain)
+        self.line_30.setLineWidth(3)
+        self.line_30.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_30, 8, 4, 1, 1)
+
+        self.line_35 = QFrame(self.layoutWidget_2)
+        self.line_35.setObjectName(u"line_35")
+        self.line_35.setFrameShadow(QFrame.Plain)
+        self.line_35.setLineWidth(3)
+        self.line_35.setFrameShape(QFrame.HLine)
+
+        self.gridLayout_2.addWidget(self.line_35, 5, 0, 1, 11)
+
+        self.line_47 = QFrame(self.layoutWidget_2)
+        self.line_47.setObjectName(u"line_47")
+        self.line_47.setFrameShadow(QFrame.Plain)
+        self.line_47.setLineWidth(3)
+        self.line_47.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_47, 8, 1, 1, 1)
+
+        self.line_40 = QFrame(self.layoutWidget_2)
+        self.line_40.setObjectName(u"line_40")
+        self.line_40.setFrameShadow(QFrame.Plain)
+        self.line_40.setLineWidth(3)
+        self.line_40.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_40, 8, 7, 1, 1)
+
+        self.line_51 = QFrame(self.layoutWidget_2)
+        self.line_51.setObjectName(u"line_51")
+        self.line_51.setFrameShadow(QFrame.Plain)
+        self.line_51.setLineWidth(3)
+        self.line_51.setFrameShape(QFrame.HLine)
+
+        self.gridLayout_2.addWidget(self.line_51, 12, 0, 1, 11)
+
+        self.line_52 = QFrame(self.layoutWidget_2)
+        self.line_52.setObjectName(u"line_52")
+        self.line_52.setFrameShadow(QFrame.Plain)
+        self.line_52.setLineWidth(3)
+        self.line_52.setFrameShape(QFrame.HLine)
+
+        self.gridLayout_2.addWidget(self.line_52, 10, 0, 1, 11)
+
+        self.line_55 = QFrame(self.layoutWidget_2)
+        self.line_55.setObjectName(u"line_55")
+        self.line_55.setFrameShadow(QFrame.Plain)
+        self.line_55.setLineWidth(3)
+        self.line_55.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_55, 11, 4, 1, 1)
+
+        self.line_56 = QFrame(self.layoutWidget_2)
+        self.line_56.setObjectName(u"line_56")
+        self.line_56.setFrameShadow(QFrame.Plain)
+        self.line_56.setLineWidth(3)
+        self.line_56.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_56, 11, 7, 1, 1)
+
+        self.line_57 = QFrame(self.layoutWidget_2)
+        self.line_57.setObjectName(u"line_57")
+        self.line_57.setFrameShadow(QFrame.Plain)
+        self.line_57.setLineWidth(3)
+        self.line_57.setFrameShape(QFrame.VLine)
+
+        self.gridLayout_2.addWidget(self.line_57, 11, 9, 1, 1)
 
         self.tabWidget.addTab(self.run_servos_tab, "")
         self.widget_2 = QWidget(self.centralwidget)
@@ -1679,41 +1756,44 @@ class Ui_MainWindow(object):
         self.button_00.setText(QCoreApplication.translate("MainWindow", u"Go", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Speed", None))
         self.label_56.setText(QCoreApplication.translate("MainWindow", u"Left eye", None))
-        self.lab_62.setText(QCoreApplication.translate("MainWindow", u"Eyelid", None))
-        self.lab_72.setText(QCoreApplication.translate("MainWindow", u"Eyebrow", None))
-        self.checkbox_70.setText(QCoreApplication.translate("MainWindow", u"Group", None))
-        self.lab_52.setText(QCoreApplication.translate("MainWindow", u"UP/DOWN", None))
-        self.lab_50.setText(QCoreApplication.translate("MainWindow", u"-45", None))
-        self.label_34.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.lab_51.setText(QCoreApplication.translate("MainWindow", u"-45", None))
-        self.checkbox_50.setText(QCoreApplication.translate("MainWindow", u"Group", None))
-        self.label_36.setText(QCoreApplication.translate("MainWindow", u"Position", None))
-        self.lab_40.setText(QCoreApplication.translate("MainWindow", u"-60", None))
-        self.label_38.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.lab_41.setText(QCoreApplication.translate("MainWindow", u"+60", None))
-        self.checkbox_40.setText(QCoreApplication.translate("MainWindow", u"Group", None))
-        self.lab_42.setText(QCoreApplication.translate("MainWindow", u"LEFT/RIGHT", None))
-        self.label_41.setText(QCoreApplication.translate("MainWindow", u"Normal", None))
-        self.label_42.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
-        self.button_60.setText(QCoreApplication.translate("MainWindow", u"Go", None))
-        self.label_43.setText(QCoreApplication.translate("MainWindow", u"Normal", None))
-        self.label_44.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
-        self.button_70.setText(QCoreApplication.translate("MainWindow", u"Go", None))
-        self.button_50.setText(QCoreApplication.translate("MainWindow", u"Go", None))
-        self.lab_70.setText(QCoreApplication.translate("MainWindow", u"-45", None))
-        self.label_46.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.lab_71.setText(QCoreApplication.translate("MainWindow", u"-45", None))
-        self.checkbox_60.setText(QCoreApplication.translate("MainWindow", u"Group", None))
         self.lab_60.setText(QCoreApplication.translate("MainWindow", u"-45", None))
         self.label_49.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.lab_61.setText(QCoreApplication.translate("MainWindow", u"-45", None))
-        self.label_51.setText(QCoreApplication.translate("MainWindow", u"Normal", None))
-        self.label_52.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.label_57.setText(QCoreApplication.translate("MainWindow", u"Right eye", None))
+        self.button_40.setText(QCoreApplication.translate("MainWindow", u"Go", None))
         self.label_53.setText(QCoreApplication.translate("MainWindow", u"Normal", None))
         self.label_54.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
-        self.button_40.setText(QCoreApplication.translate("MainWindow", u"Go", None))
+        self.lab_72.setText(QCoreApplication.translate("MainWindow", u"Eyebrow", None))
+        self.lab_42.setText(QCoreApplication.translate("MainWindow", u"LEFT/RIGHT", None))
+        self.button_70.setText(QCoreApplication.translate("MainWindow", u"Go", None))
+        self.checkbox_60.setText(QCoreApplication.translate("MainWindow", u"Group", None))
         self.label_55.setText(QCoreApplication.translate("MainWindow", u"Speed", None))
-        self.label_57.setText(QCoreApplication.translate("MainWindow", u"Right eye", None))
+        self.label_51.setText(QCoreApplication.translate("MainWindow", u"Normal", None))
+        self.label_52.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.checkbox_40.setText(QCoreApplication.translate("MainWindow", u"Group", None))
+        self.checkbox_80.setText(QCoreApplication.translate("MainWindow", u"Group", None))
+        self.label_43.setText(QCoreApplication.translate("MainWindow", u"Normal", None))
+        self.label_44.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.lab_40.setText(QCoreApplication.translate("MainWindow", u"-60", None))
+        self.label_38.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.lab_41.setText(QCoreApplication.translate("MainWindow", u"+60", None))
+        self.button_50.setText(QCoreApplication.translate("MainWindow", u"Go", None))
+        self.checkbox_70.setText(QCoreApplication.translate("MainWindow", u"Group", None))
+        self.checkbox_50.setText(QCoreApplication.translate("MainWindow", u"Group", None))
+        self.lab_62.setText(QCoreApplication.translate("MainWindow", u"Eyelid", None))
+        self.label_41.setText(QCoreApplication.translate("MainWindow", u"Normal", None))
+        self.label_42.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.lab_50.setText(QCoreApplication.translate("MainWindow", u"-45", None))
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.lab_51.setText(QCoreApplication.translate("MainWindow", u"-45", None))
+        self.lab_52.setText(QCoreApplication.translate("MainWindow", u"UP/DOWN", None))
+        self.lab_70.setText(QCoreApplication.translate("MainWindow", u"-45", None))
+        self.label_46.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.lab_71.setText(QCoreApplication.translate("MainWindow", u"-45", None))
+        self.button_60.setText(QCoreApplication.translate("MainWindow", u"Go", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Mouth", None))
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"Position", None))
+        self.button_80.setText(QCoreApplication.translate("MainWindow", u"Start", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.run_servos_tab), QCoreApplication.translate("MainWindow", u"Run_servos", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Information", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))

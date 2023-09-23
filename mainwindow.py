@@ -22,16 +22,6 @@ from Command_IO import  Command_IO, ErrorCode, Joints, ServoCommands
 #     pyside6-uic form.ui -o ui_form.py, or
 #     pyside2-uic form.ui -o ui_form.py
 
-#servo_data = ((self_ui_label_11, +45, -45, 0, label_15, 0, 250, "Left/Right", "Left_Eye"),
-#              (+45, -45, 0, 0, 250, "Up/Down",    "Left_Eye"),
-#              (+45, -45, 0, 0, 250, "Eyelid",     "Left_Eye"),
-#              (+45, -45, 0, 0, 250, "Eyebrow",    "Left_Eye"),
-#              (+45, -45, 0, 0, 250, "Left/Right", "Right_Eye"),
-#              (+45, -45, 0, 0, 250, "Up/Down",    "Right_Eye"),
-#              (+45, -45, 0, 0, 250, "Eyelid",     "Right_Eye"),
-#              (+45, -45, 0, 0, 250, "Eyebrow",    "Right_Eye"),
-#              )
-
 loader = QUiLoader()                # Set up a loader object
 Command_IO = Command_IO(Ui_MainWindow)
 ErrorCode = ErrorCode
@@ -40,6 +30,9 @@ Platform_test = Platform_test
 DEFAULT_PORT    =  9
 SPEED_THRESHOLD = 21
 NOS_SERVOS      =  8
+
+OFF = 0
+ON  = 1
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -69,7 +62,7 @@ class MainWindow(QMainWindow):
         self.platform_label = QLabel(None)
         self.ui.statusbar.addPermanentWidget(self.platform_label)
         self.platform_label.setText("Platform : Unknown ")
-
+        # update servo data tab with custom data (does not include mouth)
         servo_data = ((self.ui.lab_00, -25, self.ui.lab_01, +25, self.ui.slider_00, 0, self.ui.slider_01, 0, 250,
                           self.ui.lab_02, "Left/Right", "Left_Eye"),
                       (self.ui.lab_10, -45, self.ui.lab_11, +45, self.ui.slider_10, 0, self.ui.slider_11, 0, 250,
@@ -78,7 +71,6 @@ class MainWindow(QMainWindow):
                           self.ui.lab_22, "EyeLid", "Left_Eye"),
                       (self.ui.lab_30, -30, self.ui.lab_31, +30, self.ui.slider_30, 0, self.ui.slider_31, 0, 250,
                           self.ui.lab_32, "EyeBrow", "Left_Eye"),
-
                       (self.ui.lab_40, -25, self.ui.lab_41, +25, self.ui.slider_40, 0, self.ui.slider_41, 0, 250,
                           self.ui.lab_42, "Left/Right", "Left_Eye"),
                       (self.ui.lab_50, -45, self.ui.lab_51, +45, self.ui.slider_50, 0, self.ui.slider_51, 0, 250,
@@ -87,7 +79,6 @@ class MainWindow(QMainWindow):
                           self.ui.lab_62, "EyeLid", "Left_Eye"),
                       (self.ui.lab_70, -30, self.ui.lab_71, +30, self.ui.slider_70, 0, self.ui.slider_71, 0, 250,
                           self.ui.lab_72, "EyeBrow", "Left_Eye"),
-
                           )
     # Load servo tab with configuration data
         for index in range(NOS_SERVOS):
@@ -103,7 +94,6 @@ class MainWindow(QMainWindow):
             # item name
             servo_data[index][9].setText(servo_data[index][10])
 
-
         self.about_msg = QMessageBox(self)
         serial_port = None
         serial_baud_rate = None
@@ -118,14 +108,17 @@ class MainWindow(QMainWindow):
         self.ui.button_10.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_UP_DOWN))
         self.ui.button_20.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_LID))
         self.ui.button_30.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_BROW))
-        self.ui.button_40.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_UP_DOWN))
-        self.ui.button_50.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_LEFT_RIGHT))
+        self.ui.button_40.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_RIGHT_LEFT))
+        self.ui.button_50.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_UP_DOWN))
         self.ui.button_60.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_LID))
         self.ui.button_70.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_BROW))
+        self.ui.button_80.clicked.connect(self.Mouth_on_off)
+        self_mouth_state = OFF
 
-
-
-
+# End of initialoisation code
+#
+# System functions
+#
     def exit_program(self):
         self.ui.info_textEdit.append("exit test")
         QApplication.quit()
@@ -191,7 +184,6 @@ class MainWindow(QMainWindow):
                 servo_position = self.ui.slider_30.value()
                 servo_speed = self.ui.slider_31.value()
                 servo_group = self.ui.checkbox_30.isChecked()
-
             case Joints.RIGHT_EYE_RIGHT_LEFT:
                 servo_position = self.ui.slider_40.value()
                 servo_speed = self.ui.slider_41.value()
@@ -212,27 +204,48 @@ class MainWindow(QMainWindow):
         self.log_status(status)
 
     def Execute_servo_cmd(self, joint, position, speed, group):
-        servo_cmd = ServoCommands.ABS_MOVE
-        if (group == True):
+        # select type of move command
+        if ((group == False) and (speed < SPEED_THRESHOLD)):
+            servo_cmd = ServoCommands.ABS_MOVE
+        elif ((group == True) and (speed < SPEED_THRESHOLD)):
             servo_cmd = ServoCommands.ABS_MOVE_SYNC
+        elif ((group == False) and (speed >= SPEED_THRESHOLD)):
+            servo_cmd = ServoCommands.SPEED_MOVE
+        else:
+            servo_cmd = ServoCommands.SPEED_MOVE_SYNC
+        # construct appropriate command string
         if (speed < SPEED_THRESHOLD):
             self.cmd_string =(f"servo {DEFAULT_PORT} {servo_cmd} {joint} {position}\n")
         else:
             self.cmd_string =(f"servo {DEFAULT_PORT} {servo_cmd} {joint} {position} {speed}\n")
+        # log command for debug
         self.log_message(self.cmd_string)
+        # execute servo move command
         first_val = 0
         status =  Command_IO.do_command(self.cmd_string, first_val)
         print(status)
+        # log reply string
         self.log_message(Command_IO.reply_string)
         return status
 
+    def Mouth_on_off(self):
+        if (self.ui.checkbox_80.ischecked() == False):
+            servo_cmd = ServoCommands.ABS_MOVE
+        else:
+            servo_cmd = ServoCommands.ABS_MOVE_SYNC
 
-        # print(position)
-        # print(speed)
-        # print(group)
+        if (self.mouth_state == OFF):
+            self.cmd_string = (f"servo {DEFAULT_PORT} {servo_cmd} joints.Mouth +45\n")   # turn ON
+            self.ui.button_80.setText("Stop")
+            self.mouth = ON
+        else:
+            self.cmd_string = (f"servo {DEFAULT_PORT} {servo_cmd} joints.Mouth -45\n")   # turn OFF
+            self.ui.button_80.setText("Start")
+            self.mouth = OFF
 
-
-
+#
+# Main call
+#
 def main():
     app = QApplication(sys.argv)
     window = MainWindow()

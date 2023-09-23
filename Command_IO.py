@@ -22,6 +22,7 @@ class Joints(IntEnum):
     RIGHT_EYE_UP_DOWN    = 5
     RIGHT_EYE_LID        = 6
     RIGHT_EYE_BROW       = 7
+    MOUTH                = 8
 
 
 class ErrorCode(IntEnum):
