@@ -18,9 +18,10 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
     QGridLayout, QHBoxLayout, QLabel, QMainWindow,
-    QMenu, QMenuBar, QPushButton, QSizePolicy,
-    QSlider, QSpacerItem, QSpinBox, QStatusBar,
-    QTabWidget, QTextEdit, QVBoxLayout, QWidget)
+    QMenu, QMenuBar, QPushButton, QRadioButton,
+    QSizePolicy, QSlider, QSpacerItem, QSpinBox,
+    QStatusBar, QTabWidget, QTextEdit, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -36,7 +37,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.tabWidget = QTabWidget(self.centralwidget)
         self.tabWidget.setObjectName(u"tabWidget")
-        self.tabWidget.setGeometry(QRect(435, 35, 886, 741))
+        self.tabWidget.setGeometry(QRect(430, 40, 921, 621))
         self.tabWidget.setTabShape(QTabWidget.Triangular)
         self.set_serial_port_tab = QWidget()
         self.set_serial_port_tab.setObjectName(u"set_serial_port_tab")
@@ -1651,6 +1652,312 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addWidget(self.line_57, 11, 9, 1, 1)
 
         self.tabWidget.addTab(self.run_servos_tab, "")
+        self.run_steppers_tab = QWidget()
+        self.run_steppers_tab.setObjectName(u"run_steppers_tab")
+        self.layoutWidget2 = QWidget(self.run_steppers_tab)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(55, 75, 391, 344))
+        self.gridLayout_3 = QGridLayout(self.layoutWidget2)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.label_15 = QLabel(self.layoutWidget2)
+        self.label_15.setObjectName(u"label_15")
+        font6 = QFont()
+        font6.setPointSize(12)
+        font6.setBold(True)
+        self.label_15.setFont(font6)
+        self.label_15.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_3.addWidget(self.label_15, 13, 0, 1, 1)
+
+        self.line_60 = QFrame(self.layoutWidget2)
+        self.line_60.setObjectName(u"line_60")
+        self.line_60.setFrameShape(QFrame.HLine)
+        self.line_60.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_60, 7, 0, 1, 4)
+
+        self.line_65 = QFrame(self.layoutWidget2)
+        self.line_65.setObjectName(u"line_65")
+        self.line_65.setFrameShape(QFrame.VLine)
+        self.line_65.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_65, 1, 1, 1, 1)
+
+        self.verticalLayout_2 = QVBoxLayout()
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.radioButton_1 = QRadioButton(self.layoutWidget2)
+        self.radioButton_1.setObjectName(u"radioButton_1")
+        self.radioButton_1.setFont(font)
+
+        self.verticalLayout_2.addWidget(self.radioButton_1)
+
+        self.radioButton_2 = QRadioButton(self.layoutWidget2)
+        self.radioButton_2.setObjectName(u"radioButton_2")
+        self.radioButton_2.setFont(font)
+
+        self.verticalLayout_2.addWidget(self.radioButton_2)
+
+
+        self.gridLayout_3.addLayout(self.verticalLayout_2, 3, 2, 1, 1)
+
+        self.label_10 = QLabel(self.layoutWidget2)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setFont(font)
+        self.label_10.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.label_10.setIndent(-3)
+
+        self.gridLayout_3.addWidget(self.label_10, 3, 0, 1, 1)
+
+        self.line_67 = QFrame(self.layoutWidget2)
+        self.line_67.setObjectName(u"line_67")
+        self.line_67.setFrameShape(QFrame.VLine)
+        self.line_67.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_67, 8, 1, 1, 1)
+
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout.addItem(self.horizontalSpacer)
+
+        self.pushButton_2 = QPushButton(self.layoutWidget2)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pushButton_2.setFont(font)
+
+        self.horizontalLayout.addWidget(self.pushButton_2)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout.addItem(self.horizontalSpacer_2)
+
+        self.horizontalLayout.setStretch(0, 1)
+        self.horizontalLayout.setStretch(1, 3)
+        self.horizontalLayout.setStretch(2, 1)
+
+        self.gridLayout_3.addLayout(self.horizontalLayout, 13, 2, 1, 1)
+
+        self.line_69 = QFrame(self.layoutWidget2)
+        self.line_69.setObjectName(u"line_69")
+        self.line_69.setFrameShape(QFrame.VLine)
+        self.line_69.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_69, 13, 1, 1, 1)
+
+        self.label_11 = QLabel(self.layoutWidget2)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setFont(font)
+        self.label_11.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_3.addWidget(self.label_11, 11, 0, 1, 1)
+
+        self.line_62 = QFrame(self.layoutWidget2)
+        self.line_62.setObjectName(u"line_62")
+        self.line_62.setFrameShape(QFrame.HLine)
+        self.line_62.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_62, 12, 0, 1, 4)
+
+        self.line_61 = QFrame(self.layoutWidget2)
+        self.line_61.setObjectName(u"line_61")
+        self.line_61.setFrameShape(QFrame.HLine)
+        self.line_61.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_61, 10, 0, 1, 4)
+
+        self.spinBox = QSpinBox(self.layoutWidget2)
+        self.spinBox.setObjectName(u"spinBox")
+        self.spinBox.setFrame(True)
+        self.spinBox.setProperty("showGroupSeparator", False)
+        self.spinBox.setMinimum(-330)
+        self.spinBox.setMaximum(330)
+        self.spinBox.setSingleStep(10)
+
+        self.gridLayout_3.addWidget(self.spinBox, 5, 3, 1, 1)
+
+        self.verticalLayout_19 = QVBoxLayout()
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.verticalLayout_19.setContentsMargins(-1, -1, 20, -1)
+        self.horizontalLayout_24 = QHBoxLayout()
+        self.horizontalLayout_24.setObjectName(u"horizontalLayout_24")
+        self.lab_33 = QLabel(self.layoutWidget2)
+        self.lab_33.setObjectName(u"lab_33")
+        self.lab_33.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.lab_33.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_24.addWidget(self.lab_33)
+
+        self.horizontalSpacer_30 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_24.addItem(self.horizontalSpacer_30)
+
+        self.label_30 = QLabel(self.layoutWidget2)
+        self.label_30.setObjectName(u"label_30")
+        self.label_30.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.label_30.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_24.addWidget(self.label_30)
+
+        self.horizontalSpacer_31 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_24.addItem(self.horizontalSpacer_31)
+
+        self.lab_34 = QLabel(self.layoutWidget2)
+        self.lab_34.setObjectName(u"lab_34")
+        self.lab_34.setStyleSheet(u"font: 9pt \"Segoe UI\";")
+        self.lab_34.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_24.addWidget(self.lab_34)
+
+
+        self.verticalLayout_19.addLayout(self.horizontalLayout_24)
+
+        self.slider_32 = QSlider(self.layoutWidget2)
+        self.slider_32.setObjectName(u"slider_32")
+        self.slider_32.setMinimum(-330)
+        self.slider_32.setMaximum(330)
+        self.slider_32.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_19.addWidget(self.slider_32)
+
+
+        self.gridLayout_3.addLayout(self.verticalLayout_19, 5, 2, 1, 1)
+
+        self.line_63 = QFrame(self.layoutWidget2)
+        self.line_63.setObjectName(u"line_63")
+        self.line_63.setFrameShape(QFrame.HLine)
+        self.line_63.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_63, 0, 0, 1, 4)
+
+        self.line_66 = QFrame(self.layoutWidget2)
+        self.line_66.setObjectName(u"line_66")
+        self.line_66.setFrameShape(QFrame.VLine)
+        self.line_66.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_66, 5, 1, 1, 1)
+
+        self.line_68 = QFrame(self.layoutWidget2)
+        self.line_68.setObjectName(u"line_68")
+        self.line_68.setFrameShape(QFrame.VLine)
+        self.line_68.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_68, 11, 1, 1, 1)
+
+        self.label_7 = QLabel(self.layoutWidget2)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setFont(font)
+        self.label_7.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout_3.addWidget(self.label_7, 8, 0, 1, 1)
+
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_2.addItem(self.horizontalSpacer_3)
+
+        self.checkBox = QCheckBox(self.layoutWidget2)
+        self.checkBox.setObjectName(u"checkBox")
+        self.checkBox.setFont(font1)
+
+        self.horizontalLayout_2.addWidget(self.checkBox)
+
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_2.addItem(self.horizontalSpacer_4)
+
+
+        self.gridLayout_3.addLayout(self.horizontalLayout_2, 11, 2, 1, 1)
+
+        self.line_58 = QFrame(self.layoutWidget2)
+        self.line_58.setObjectName(u"line_58")
+        self.line_58.setFrameShape(QFrame.HLine)
+        self.line_58.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_58, 2, 0, 1, 4)
+
+        self.horizontalLayout_4 = QHBoxLayout()
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalSpacer_33 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_4.addItem(self.horizontalSpacer_33)
+
+        self.comboBox = QComboBox(self.layoutWidget2)
+        self.comboBox.setObjectName(u"comboBox")
+
+        self.horizontalLayout_4.addWidget(self.comboBox)
+
+        self.horizontalSpacer_34 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_4.addItem(self.horizontalSpacer_34)
+
+        self.horizontalLayout_4.setStretch(0, 1)
+        self.horizontalLayout_4.setStretch(1, 5)
+        self.horizontalLayout_4.setStretch(2, 1)
+
+        self.gridLayout_3.addLayout(self.horizontalLayout_4, 1, 2, 1, 1)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalSpacer_5 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer_5)
+
+        self.comboBox_2 = QComboBox(self.layoutWidget2)
+        self.comboBox_2.setObjectName(u"comboBox_2")
+
+        self.horizontalLayout_3.addWidget(self.comboBox_2)
+
+        self.horizontalSpacer_32 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer_32)
+
+        self.horizontalLayout_3.setStretch(0, 1)
+        self.horizontalLayout_3.setStretch(1, 3)
+        self.horizontalLayout_3.setStretch(2, 1)
+
+        self.gridLayout_3.addLayout(self.horizontalLayout_3, 8, 2, 1, 1)
+
+        self.line_64 = QFrame(self.layoutWidget2)
+        self.line_64.setObjectName(u"line_64")
+        self.line_64.setFrameShape(QFrame.HLine)
+        self.line_64.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_64, 14, 0, 1, 4)
+
+        self.label_3 = QLabel(self.layoutWidget2)
+        self.label_3.setObjectName(u"label_3")
+        font7 = QFont()
+        font7.setPointSize(12)
+        font7.setBold(False)
+        self.label_3.setFont(font7)
+
+        self.gridLayout_3.addWidget(self.label_3, 1, 0, 1, 1)
+
+        self.label_6 = QLabel(self.layoutWidget2)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setFont(font)
+        self.label_6.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_3.addWidget(self.label_6, 5, 0, 1, 1)
+
+        self.line_59 = QFrame(self.layoutWidget2)
+        self.line_59.setObjectName(u"line_59")
+        self.line_59.setFrameShape(QFrame.HLine)
+        self.line_59.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_59, 4, 0, 1, 4)
+
+        self.line_70 = QFrame(self.layoutWidget2)
+        self.line_70.setObjectName(u"line_70")
+        self.line_70.setFrameShape(QFrame.VLine)
+        self.line_70.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_3.addWidget(self.line_70, 3, 1, 1, 1)
+
+        self.tabWidget.addTab(self.run_steppers_tab, "")
         self.widget_2 = QWidget(self.centralwidget)
         self.widget_2.setObjectName(u"widget_2")
         self.widget_2.setGeometry(QRect(20, 15, 401, 406))
@@ -1700,8 +2007,10 @@ class Ui_MainWindow(object):
         self.spinbox_60.valueChanged.connect(self.slider_60.setValue)
         self.slider_70.valueChanged.connect(self.spinbox_70.setValue)
         self.spinbox_70.valueChanged.connect(self.slider_70.setValue)
+        self.slider_32.valueChanged.connect(self.spinBox.setValue)
+        self.spinBox.valueChanged.connect(self.slider_32.setValue)
 
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1794,7 +2103,21 @@ class Ui_MainWindow(object):
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Mouth", None))
         self.label_36.setText(QCoreApplication.translate("MainWindow", u"Position", None))
         self.button_80.setText(QCoreApplication.translate("MainWindow", u"Start", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.run_servos_tab), QCoreApplication.translate("MainWindow", u"Run_servos", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.run_servos_tab), QCoreApplication.translate("MainWindow", u"Run servo motors", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
+        self.radioButton_1.setText(QCoreApplication.translate("MainWindow", u"Relative move", None))
+        self.radioButton_2.setText(QCoreApplication.translate("MainWindow", u"Absolute move", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Type of MOVE", None))
+        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Go", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Add to group move", None))
+        self.lab_33.setText(QCoreApplication.translate("MainWindow", u"-330", None))
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.lab_34.setText(QCoreApplication.translate("MainWindow", u"330", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Speed profile", None))
+        self.checkBox.setText(QCoreApplication.translate("MainWindow", u"Group", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Select stepper motor", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Set  number of steps", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.run_steppers_tab), QCoreApplication.translate("MainWindow", u"Run stepper motors", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Information", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
     # retranslateUi

@@ -17,17 +17,17 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>435</x>
-      <y>35</y>
-      <width>886</width>
-      <height>741</height>
+      <x>430</x>
+      <y>40</y>
+      <width>921</width>
+      <height>621</height>
      </rect>
     </property>
     <property name="tabShape">
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="set_serial_port_tab">
      <property name="enabled">
@@ -192,7 +192,7 @@
       <bool>false</bool>
      </property>
      <attribute name="title">
-      <string>Run_servos</string>
+      <string>Run servo motors</string>
      </attribute>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
@@ -3071,6 +3071,493 @@ color: rgb(255, 255, 0)</string>
       </layout>
      </widget>
     </widget>
+    <widget class="QWidget" name="run_steppers_tab">
+     <attribute name="title">
+      <string>Run stepper motors</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>55</x>
+        <y>75</y>
+        <width>391</width>
+        <height>344</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="13" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Execute</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="4">
+        <widget class="Line" name="line_60">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="Line" name="line_65">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QRadioButton" name="radioButton_1">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Relative move</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_2">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Absolute move</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Type of MOVE</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="indent">
+          <number>-3</number>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="Line" name="line_67">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,3,1">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Go</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="13" column="1">
+        <widget class="Line" name="line_69">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Add to group move</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0" colspan="4">
+        <widget class="Line" name="line_62">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0" colspan="4">
+        <widget class="Line" name="line_61">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QSpinBox" name="spinBox">
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+         <property name="showGroupSeparator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="minimum">
+          <number>-330</number>
+         </property>
+         <property name="maximum">
+          <number>330</number>
+         </property>
+         <property name="singleStep">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <layout class="QVBoxLayout" name="verticalLayout_19">
+         <property name="rightMargin">
+          <number>20</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_24">
+           <item>
+            <widget class="QLabel" name="lab_33">
+             <property name="styleSheet">
+              <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>-330</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_30">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_30">
+             <property name="styleSheet">
+              <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_31">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="lab_34">
+             <property name="styleSheet">
+              <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>330</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QSlider" name="slider_32">
+           <property name="minimum">
+            <number>-330</number>
+           </property>
+           <property name="maximum">
+            <number>330</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0" colspan="4">
+        <widget class="Line" name="line_63">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="Line" name="line_66">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="Line" name="line_68">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Speed profile</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <kerning>false</kerning>
+            </font>
+           </property>
+           <property name="text">
+            <string>Group</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0" colspan="4">
+        <widget class="Line" name="line_58">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,5,1">
+         <item>
+          <spacer name="horizontalSpacer_33">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_34">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="8" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,3,1">
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>30</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_2"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_32">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="14" column="0" colspan="4">
+        <widget class="Line" name="line_64">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Select stepper motor</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Set  number of steps</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="4">
+        <widget class="Line" name="line_59">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="Line" name="line_70">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
    </widget>
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
@@ -3164,12 +3651,12 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>738</x>
-     <y>302</y>
+     <x>733</x>
+     <y>307</y>
     </hint>
     <hint type="destinationlabel">
-     <x>816</x>
-     <y>295</y>
+     <x>811</x>
+     <y>300</y>
     </hint>
    </hints>
   </connection>
@@ -3180,12 +3667,12 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>816</x>
-     <y>175</y>
+     <x>811</x>
+     <y>180</y>
     </hint>
     <hint type="destinationlabel">
-     <x>738</x>
-     <y>182</y>
+     <x>733</x>
+     <y>187</y>
     </hint>
    </hints>
   </connection>
@@ -3196,12 +3683,12 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>738</x>
-     <y>362</y>
+     <x>733</x>
+     <y>367</y>
     </hint>
     <hint type="destinationlabel">
-     <x>816</x>
-     <y>355</y>
+     <x>811</x>
+     <y>360</y>
     </hint>
    </hints>
   </connection>
@@ -3212,12 +3699,12 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>738</x>
-     <y>182</y>
+     <x>733</x>
+     <y>187</y>
     </hint>
     <hint type="destinationlabel">
-     <x>816</x>
-     <y>175</y>
+     <x>811</x>
+     <y>180</y>
     </hint>
    </hints>
   </connection>
@@ -3228,12 +3715,12 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>816</x>
-     <y>355</y>
+     <x>811</x>
+     <y>360</y>
     </hint>
     <hint type="destinationlabel">
-     <x>738</x>
-     <y>362</y>
+     <x>733</x>
+     <y>367</y>
     </hint>
    </hints>
   </connection>
@@ -3244,12 +3731,12 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>816</x>
-     <y>235</y>
+     <x>811</x>
+     <y>240</y>
     </hint>
     <hint type="destinationlabel">
-     <x>738</x>
-     <y>242</y>
+     <x>733</x>
+     <y>247</y>
     </hint>
    </hints>
   </connection>
@@ -3260,12 +3747,12 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>738</x>
-     <y>242</y>
+     <x>733</x>
+     <y>247</y>
     </hint>
     <hint type="destinationlabel">
-     <x>816</x>
-     <y>235</y>
+     <x>811</x>
+     <y>240</y>
     </hint>
    </hints>
   </connection>
@@ -3276,12 +3763,12 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>816</x>
-     <y>295</y>
+     <x>811</x>
+     <y>300</y>
     </hint>
     <hint type="destinationlabel">
-     <x>738</x>
-     <y>302</y>
+     <x>733</x>
+     <y>307</y>
     </hint>
    </hints>
   </connection>
@@ -3292,8 +3779,8 @@ color: rgb(255, 255, 0)</string>
    <slot>open_serial_port()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>525</x>
-     <y>248</y>
+     <x>528</x>
+     <y>278</y>
     </hint>
     <hint type="destinationlabel">
      <x>617</x>
@@ -3308,8 +3795,8 @@ color: rgb(255, 255, 0)</string>
    <slot>close_serial_port()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>525</x>
-     <y>248</y>
+     <x>528</x>
+     <y>338</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
@@ -3404,8 +3891,8 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>644</x>
-     <y>578</y>
+     <x>733</x>
+     <y>593</y>
     </hint>
     <hint type="destinationlabel">
      <x>781</x>
@@ -3420,8 +3907,8 @@ color: rgb(255, 255, 0)</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>777</x>
-     <y>554</y>
+     <x>811</x>
+     <y>586</y>
     </hint>
     <hint type="destinationlabel">
      <x>729</x>
@@ -3458,6 +3945,38 @@ color: rgb(255, 255, 0)</string>
     <hint type="destinationlabel">
      <x>729</x>
      <y>643</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider_32</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>751</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>859</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slider_32</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>858</x>
+     <y>324</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>752</x>
+     <y>330</y>
     </hint>
    </hints>
   </connection>
