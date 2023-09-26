@@ -3081,7 +3081,7 @@ color: rgb(255, 255, 0)</string>
         <x>55</x>
         <y>75</y>
         <width>391</width>
-        <height>344</height>
+        <height>352</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
@@ -3138,6 +3138,18 @@ color: rgb(255, 255, 0)</string>
            </property>
            <property name="text">
             <string>Absolute move</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Calibrate</string>
            </property>
           </widget>
          </item>
@@ -3340,7 +3352,7 @@ color: rgb(255, 255, 0)</string>
           </layout>
          </item>
          <item>
-          <widget class="QSlider" name="slider_32">
+          <widget class="QSlider" name="slider_step_value">
            <property name="minimum">
             <number>-330</number>
            </property>
@@ -3949,7 +3961,7 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>slider_32</sender>
+   <sender>slider_step_value</sender>
    <signal>valueChanged(int)</signal>
    <receiver>spinBox</receiver>
    <slot>setValue(int)</slot>
@@ -3967,7 +3979,7 @@ color: rgb(255, 255, 0)</string>
   <connection>
    <sender>spinBox</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>slider_32</receiver>
+   <receiver>slider_step_value</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">

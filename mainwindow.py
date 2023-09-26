@@ -34,6 +34,11 @@ NOS_SERVOS      =  8
 OFF = 0
 ON  = 1
 
+baudrate_options = ["115200", "256000", "9600"]
+stepper_cmds_options = ["Relative move", "Absolute move", "Relative move group", "Calibrate"]
+stepper_profile_cmds_options = ["fast", "medium", "slow"]
+stepper_joints_options = ["Neck"]
+
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -94,6 +99,11 @@ class MainWindow(QMainWindow):
             # item name
             servo_data[index][9].setText(servo_data[index][10])
 
+        # load stepper motor tab with configuration data
+        self.ui.comboBox.addItems(stepper_joints_options)
+        self.ui.comboBox_2.addItems(stepper_profile_cmds_options)
+        self.ui.pushButton_2.clicked.connect(self.go_stepper_cmd)
+
         self.about_msg = QMessageBox(self)
         serial_port = None
         serial_baud_rate = None
@@ -104,14 +114,14 @@ class MainWindow(QMainWindow):
         self.platform_label.setText("Platform: " + Platform_test.get_platform_name(self))
 
     # route SERVO go buttons to a single slot with and added button code
-        self.ui.button_00.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_RIGHT_LEFT))
-        self.ui.button_10.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_UP_DOWN))
-        self.ui.button_20.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_LID))
-        self.ui.button_30.clicked.connect(lambda x:self.go_button_pushed(Joints.LEFT_EYE_BROW))
-        self.ui.button_40.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_RIGHT_LEFT))
-        self.ui.button_50.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_UP_DOWN))
-        self.ui.button_60.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_LID))
-        self.ui.button_70.clicked.connect(lambda x:self.go_button_pushed(Joints.RIGHT_EYE_BROW))
+        self.ui.button_00.clicked.connect(lambda x:self.go_servo_cmd(Joints.LEFT_EYE_RIGHT_LEFT))
+        self.ui.button_10.clicked.connect(lambda x:self.go_servo_cmd(Joints.LEFT_EYE_UP_DOWN))
+        self.ui.button_20.clicked.connect(lambda x:self.go_servo_cmd(Joints.LEFT_EYE_LID))
+        self.ui.button_30.clicked.connect(lambda x:self.go_servo_cmd(Joints.LEFT_EYE_BROW))
+        self.ui.button_40.clicked.connect(lambda x:self.go_servo_cmd(Joints.RIGHT_EYE_RIGHT_LEFT))
+        self.ui.button_50.clicked.connect(lambda x:self.go_servo_cmd(Joints.RIGHT_EYE_UP_DOWN))
+        self.ui.button_60.clicked.connect(lambda x:self.go_servo_cmd(Joints.RIGHT_EYE_LID))
+        self.ui.button_70.clicked.connect(lambda x:self.go_servo_cmd(Joints.RIGHT_EYE_BROW))
         self.ui.button_80.clicked.connect(self.Mouth_on_off)
         self_mouth_state = OFF
 
@@ -166,7 +176,7 @@ class MainWindow(QMainWindow):
         self.log_message(Command_IO.reply_string)
         return status
 
-    def go_button_pushed(self, joint_code):
+    def go_servo_cmd(self, joint_code):
         match joint_code:
             case Joints.LEFT_EYE_RIGHT_LEFT:
                 servo_position = self.ui.slider_00.value()
@@ -202,6 +212,15 @@ class MainWindow(QMainWindow):
                 servo_group = self.ui.checkbox_70.isChecked()
         status = self.Execute_servo_cmd(joint_code, servo_position, servo_speed, servo_group)
         self.log_status(status)
+
+    def go_stepper_cmd(self):
+        stepper_no = self.ui.comboBox.currentIndex()
+        stepper_speed_profile = self.ui.comboBox_2.currentIndex()
+        stepper_step_value = self.ui.slider_step_value()
+        stepper_group = self.ui.checkBox.isChecked()
+        stepper_rel = self.ui.radioButton_1.isChecked()
+        stepper_abs = self.ui.radioButton_2.isChecked()
+        stepper_calibrate = self.ui.radioButton.isChecked()
 
     def Execute_servo_cmd(self, joint, position, speed, group):
         # select type of move command

@@ -1656,7 +1656,7 @@ class Ui_MainWindow(object):
         self.run_steppers_tab.setObjectName(u"run_steppers_tab")
         self.layoutWidget2 = QWidget(self.run_steppers_tab)
         self.layoutWidget2.setObjectName(u"layoutWidget2")
-        self.layoutWidget2.setGeometry(QRect(55, 75, 391, 344))
+        self.layoutWidget2.setGeometry(QRect(55, 75, 391, 352))
         self.gridLayout_3 = QGridLayout(self.layoutWidget2)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -1697,6 +1697,12 @@ class Ui_MainWindow(object):
         self.radioButton_2.setFont(font)
 
         self.verticalLayout_2.addWidget(self.radioButton_2)
+
+        self.radioButton = QRadioButton(self.layoutWidget2)
+        self.radioButton.setObjectName(u"radioButton")
+        self.radioButton.setFont(font)
+
+        self.verticalLayout_2.addWidget(self.radioButton)
 
 
         self.gridLayout_3.addLayout(self.verticalLayout_2, 3, 2, 1, 1)
@@ -2107,6 +2113,7 @@ class Ui_MainWindow(object):
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
         self.radioButton_1.setText(QCoreApplication.translate("MainWindow", u"Relative move", None))
         self.radioButton_2.setText(QCoreApplication.translate("MainWindow", u"Absolute move", None))
+        self.radioButton.setText(QCoreApplication.translate("MainWindow", u"Calibrate", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Type of MOVE", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Go", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Add to group move", None))
