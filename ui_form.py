@@ -18,10 +18,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
     QGridLayout, QHBoxLayout, QLabel, QMainWindow,
-    QMenu, QMenuBar, QPushButton, QRadioButton,
-    QSizePolicy, QSlider, QSpacerItem, QSpinBox,
-    QStatusBar, QTabWidget, QTextEdit, QVBoxLayout,
-    QWidget)
+    QMenu, QMenuBar, QPushButton, QSizePolicy,
+    QSlider, QSpacerItem, QSpinBox, QStatusBar,
+    QTabWidget, QTextEdit, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -37,7 +36,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.tabWidget = QTabWidget(self.centralwidget)
         self.tabWidget.setObjectName(u"tabWidget")
-        self.tabWidget.setGeometry(QRect(430, 40, 921, 621))
+        self.tabWidget.setGeometry(QRect(430, 40, 921, 671))
         self.tabWidget.setTabShape(QTabWidget.Triangular)
         self.set_serial_port_tab = QWidget()
         self.set_serial_port_tab.setObjectName(u"set_serial_port_tab")
@@ -1684,29 +1683,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.line_65, 1, 1, 1, 1)
 
-        self.verticalLayout_2 = QVBoxLayout()
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.radioButton_1 = QRadioButton(self.layoutWidget2)
-        self.radioButton_1.setObjectName(u"radioButton_1")
-        self.radioButton_1.setFont(font)
-
-        self.verticalLayout_2.addWidget(self.radioButton_1)
-
-        self.radioButton_2 = QRadioButton(self.layoutWidget2)
-        self.radioButton_2.setObjectName(u"radioButton_2")
-        self.radioButton_2.setFont(font)
-
-        self.verticalLayout_2.addWidget(self.radioButton_2)
-
-        self.radioButton = QRadioButton(self.layoutWidget2)
-        self.radioButton.setObjectName(u"radioButton")
-        self.radioButton.setFont(font)
-
-        self.verticalLayout_2.addWidget(self.radioButton)
-
-
-        self.gridLayout_3.addLayout(self.verticalLayout_2, 3, 2, 1, 1)
-
         self.label_10 = QLabel(self.layoutWidget2)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setFont(font)
@@ -1754,7 +1730,7 @@ class Ui_MainWindow(object):
         self.label_11 = QLabel(self.layoutWidget2)
         self.label_11.setObjectName(u"label_11")
         self.label_11.setFont(font)
-        self.label_11.setAlignment(Qt.AlignCenter)
+        self.label_11.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.gridLayout_3.addWidget(self.label_11, 11, 0, 1, 1)
 
@@ -1776,9 +1752,9 @@ class Ui_MainWindow(object):
         self.spinBox.setObjectName(u"spinBox")
         self.spinBox.setFrame(True)
         self.spinBox.setProperty("showGroupSeparator", False)
-        self.spinBox.setMinimum(-330)
-        self.spinBox.setMaximum(330)
-        self.spinBox.setSingleStep(10)
+        self.spinBox.setMinimum(-60)
+        self.spinBox.setMaximum(60)
+        self.spinBox.setSingleStep(5)
 
         self.gridLayout_3.addWidget(self.spinBox, 5, 3, 1, 1)
 
@@ -1819,13 +1795,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_19.addLayout(self.horizontalLayout_24)
 
-        self.slider_32 = QSlider(self.layoutWidget2)
-        self.slider_32.setObjectName(u"slider_32")
-        self.slider_32.setMinimum(-330)
-        self.slider_32.setMaximum(330)
-        self.slider_32.setOrientation(Qt.Horizontal)
+        self.slider_step_value = QSlider(self.layoutWidget2)
+        self.slider_step_value.setObjectName(u"slider_step_value")
+        self.slider_step_value.setMinimum(-60)
+        self.slider_step_value.setMaximum(60)
+        self.slider_step_value.setOrientation(Qt.Horizontal)
 
-        self.verticalLayout_19.addWidget(self.slider_32)
+        self.verticalLayout_19.addWidget(self.slider_step_value)
 
 
         self.gridLayout_3.addLayout(self.verticalLayout_19, 5, 2, 1, 1)
@@ -1963,6 +1939,24 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.line_70, 3, 1, 1, 1)
 
+        self.horizontalLayout_5 = QHBoxLayout()
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalSpacer_35 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_5.addItem(self.horizontalSpacer_35)
+
+        self.comboBox_3 = QComboBox(self.layoutWidget2)
+        self.comboBox_3.setObjectName(u"comboBox_3")
+
+        self.horizontalLayout_5.addWidget(self.comboBox_3)
+
+        self.horizontalSpacer_36 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_5.addItem(self.horizontalSpacer_36)
+
+
+        self.gridLayout_3.addLayout(self.horizontalLayout_5, 3, 2, 1, 1)
+
         self.tabWidget.addTab(self.run_steppers_tab, "")
         self.widget_2 = QWidget(self.centralwidget)
         self.widget_2.setObjectName(u"widget_2")
@@ -2013,10 +2007,10 @@ class Ui_MainWindow(object):
         self.spinbox_60.valueChanged.connect(self.slider_60.setValue)
         self.slider_70.valueChanged.connect(self.spinbox_70.setValue)
         self.spinbox_70.valueChanged.connect(self.slider_70.setValue)
-        self.slider_32.valueChanged.connect(self.spinBox.setValue)
-        self.spinBox.valueChanged.connect(self.slider_32.setValue)
+        self.slider_step_value.valueChanged.connect(self.spinBox.setValue)
+        self.spinBox.valueChanged.connect(self.slider_step_value.setValue)
 
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2111,19 +2105,16 @@ class Ui_MainWindow(object):
         self.button_80.setText(QCoreApplication.translate("MainWindow", u"Start", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.run_servos_tab), QCoreApplication.translate("MainWindow", u"Run servo motors", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
-        self.radioButton_1.setText(QCoreApplication.translate("MainWindow", u"Relative move", None))
-        self.radioButton_2.setText(QCoreApplication.translate("MainWindow", u"Absolute move", None))
-        self.radioButton.setText(QCoreApplication.translate("MainWindow", u"Calibrate", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Type of MOVE", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Go", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Add to group move", None))
-        self.lab_33.setText(QCoreApplication.translate("MainWindow", u"-330", None))
+        self.lab_33.setText(QCoreApplication.translate("MainWindow", u"-60", None))
         self.label_30.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.lab_34.setText(QCoreApplication.translate("MainWindow", u"330", None))
+        self.lab_34.setText(QCoreApplication.translate("MainWindow", u"+60", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Speed profile", None))
         self.checkBox.setText(QCoreApplication.translate("MainWindow", u"Group", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Select stepper motor", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Set  number of steps", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Move angle (degrees)", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.run_steppers_tab), QCoreApplication.translate("MainWindow", u"Run stepper motors", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Information", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))

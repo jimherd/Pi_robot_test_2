@@ -26,7 +26,7 @@ loader = QUiLoader()                # Set up a loader object
 Command_IO = Command_IO(Ui_MainWindow)
 ErrorCode = ErrorCode
 Platform_test = Platform_test
-
+intro_string = "Hello"
 DEFAULT_PORT    =  9
 SPEED_THRESHOLD = 21
 NOS_SERVOS      =  8
@@ -35,7 +35,7 @@ OFF = 0
 ON  = 1
 
 baudrate_options = ["115200", "256000", "9600"]
-stepper_cmds_options = ["Relative move", "Absolute move", "Relative move group", "Calibrate"]
+stepper_cmds_options = ["Relative move", "Absolute move", "Relative move group","Absolute move group", "Calibrate"]
 stepper_profile_cmds_options = ["fast", "medium", "slow"]
 stepper_joints_options = ["Neck"]
 
@@ -77,13 +77,13 @@ class MainWindow(QMainWindow):
                       (self.ui.lab_30, -30, self.ui.lab_31, +30, self.ui.slider_30, 0, self.ui.slider_31, 0, 250,
                           self.ui.lab_32, "EyeBrow", "Left_Eye"),
                       (self.ui.lab_40, -25, self.ui.lab_41, +25, self.ui.slider_40, 0, self.ui.slider_41, 0, 250,
-                          self.ui.lab_42, "Left/Right", "Left_Eye"),
+                          self.ui.lab_42, "Left/Right", "Right_Eye"),
                       (self.ui.lab_50, -45, self.ui.lab_51, +45, self.ui.slider_50, 0, self.ui.slider_51, 0, 250,
-                          self.ui.lab_52, "Down/Up", "Left_Eye"),
+                          self.ui.lab_52, "Down/Up", "Right_Eye"),
                       (self.ui.lab_60, -25, self.ui.lab_61, +25, self.ui.slider_60, 0, self.ui.slider_61, 0, 250,
-                          self.ui.lab_62, "EyeLid", "Left_Eye"),
+                          self.ui.lab_62, "EyeLid", "Right_Eye"),
                       (self.ui.lab_70, -30, self.ui.lab_71, +30, self.ui.slider_70, 0, self.ui.slider_71, 0, 250,
-                          self.ui.lab_72, "EyeBrow", "Left_Eye"),
+                          self.ui.lab_72, "EyeBrow", "Right_Eye"),
                           )
     # Load servo tab with configuration data
         for index in range(NOS_SERVOS):
@@ -102,13 +102,16 @@ class MainWindow(QMainWindow):
         # load stepper motor tab with configuration data
         self.ui.comboBox.addItems(stepper_joints_options)
         self.ui.comboBox_2.addItems(stepper_profile_cmds_options)
+        self.ui.comboBox_3.addItems(stepper_cmds_options)
         self.ui.pushButton_2.clicked.connect(self.go_stepper_cmd)
 
         self.about_msg = QMessageBox(self)
         serial_port = None
         serial_baud_rate = None
         engine = pyttsx3.init()
-        engine.say('Hello jim.')
+        voices = engine.getProperty('voices')  # getting details of current voice
+        engine.setProperty('voice', voices[1].id)
+        engine.say(intro_string)
         engine.runAndWait()
         Platform_test.check_platform(self)
         self.platform_label.setText("Platform: " + Platform_test.get_platform_name(self))
@@ -123,12 +126,12 @@ class MainWindow(QMainWindow):
         self.ui.button_60.clicked.connect(lambda x:self.go_servo_cmd(Joints.RIGHT_EYE_LID))
         self.ui.button_70.clicked.connect(lambda x:self.go_servo_cmd(Joints.RIGHT_EYE_BROW))
         self.ui.button_80.clicked.connect(self.Mouth_on_off)
-        self_mouth_state = OFF
+        self.mouth_state = OFF
 
-# End of initialoisation code
-#
+# End of initialisation code
+# ===========================================================================
 # System functions
-#
+
     def exit_program(self):
         self.ui.info_textEdit.append("exit test")
         QApplication.quit()
@@ -166,6 +169,8 @@ class MainWindow(QMainWindow):
     def log_status(self, error_code):
         self.error_code_label.setText("Status code : " + str(error_code))
 
+# ===========================================================================
+# ping code
     def ping(self):
         self.cmd_string = "ping 0 " + str(random.randint(1,98)) + "\n"
         self.log_message(self.cmd_string)
@@ -176,6 +181,8 @@ class MainWindow(QMainWindow):
         self.log_message(Command_IO.reply_string)
         return status
 
+# ===========================================================================
+# servo code
     def go_servo_cmd(self, joint_code):
         match joint_code:
             case Joints.LEFT_EYE_RIGHT_LEFT:
@@ -213,17 +220,8 @@ class MainWindow(QMainWindow):
         status = self.Execute_servo_cmd(joint_code, servo_position, servo_speed, servo_group)
         self.log_status(status)
 
-    def go_stepper_cmd(self):
-        stepper_no = self.ui.comboBox.currentIndex()
-        stepper_speed_profile = self.ui.comboBox_2.currentIndex()
-        stepper_step_value = self.ui.slider_step_value()
-        stepper_group = self.ui.checkBox.isChecked()
-        stepper_rel = self.ui.radioButton_1.isChecked()
-        stepper_abs = self.ui.radioButton_2.isChecked()
-        stepper_calibrate = self.ui.radioButton.isChecked()
-
     def Execute_servo_cmd(self, joint, position, speed, group):
-        # select type of move command
+    # select type of move command
         if ((group == False) and (speed < SPEED_THRESHOLD)):
             servo_cmd = ServoCommands.ABS_MOVE
         elif ((group == True) and (speed < SPEED_THRESHOLD)):
@@ -239,7 +237,53 @@ class MainWindow(QMainWindow):
             self.cmd_string =(f"servo {DEFAULT_PORT} {servo_cmd} {joint} {position} {speed}\n")
         # log command for debug
         self.log_message(self.cmd_string)
+    # execute servo move command
+        first_val = 0
+        status =  Command_IO.do_command(self.cmd_string, first_val)
+        print(status)
+            # log reply string
+        self.log_message(Command_IO.reply_string)
+        return status
+
+    def Mouth_on_off(self):
+        if (self.ui.checkbox_80.isChecked() == False):
+            servo_cmd = ServoCommands.ABS_MOVE
+        else:
+            servo_cmd = ServoCommands.ABS_MOVE_SYNC
+
+        if (self.mouth_state == OFF):
+            self.cmd_string = (f"servo {DEFAULT_PORT} {servo_cmd} 8 45\n")   # turn ON
+            self.ui.button_80.setText("Stop")
+            self.mouth_state = ON
+        else:
+            self.cmd_string = (f"servo {DEFAULT_PORT} {servo_cmd} 8 0\n")   # turn OFF
+            self.ui.button_80.setText("Start")
+            self.mouth_state = OFF
+
+        self.log_message(self.cmd_string)
         # execute servo move command
+        first_val = 0
+        status =  Command_IO.do_command(self.cmd_string, first_val)
+        print(status)
+                # log reply string
+        self.log_message(Command_IO.reply_string)
+        return status
+
+
+
+# ===========================================================================
+# Stepper motor code
+    def go_stepper_cmd(self):
+        stepper_no = self.ui.comboBox.currentIndex()
+        stepper_cmd = self.ui.comboBox_3.currentIndex()
+        stepper_speed_profile = self.ui.comboBox_2.currentIndex()
+        stepper_step_value = self.ui.slider_step_value.value()
+        stepper_group = self.ui.checkBox.isChecked()
+        self.execute_stepper_cmd(stepper_no, stepper_cmd, stepper_speed_profile, stepper_step_value)
+
+    def execute_stepper_cmd(self, stepper_no, stepper_cmd, stepper_speed_profile, stepper_step_value):
+        self.cmd_string =(f"stepper {DEFAULT_PORT} {stepper_cmd} {stepper_no} {stepper_step_value}\n")
+        self.log_message(self.cmd_string)
         first_val = 0
         status =  Command_IO.do_command(self.cmd_string, first_val)
         print(status)
@@ -247,22 +291,7 @@ class MainWindow(QMainWindow):
         self.log_message(Command_IO.reply_string)
         return status
 
-    def Mouth_on_off(self):
-        if (self.ui.checkbox_80.ischecked() == False):
-            servo_cmd = ServoCommands.ABS_MOVE
-        else:
-            servo_cmd = ServoCommands.ABS_MOVE_SYNC
-
-        if (self.mouth_state == OFF):
-            self.cmd_string = (f"servo {DEFAULT_PORT} {servo_cmd} joints.Mouth +45\n")   # turn ON
-            self.ui.button_80.setText("Stop")
-            self.mouth = ON
-        else:
-            self.cmd_string = (f"servo {DEFAULT_PORT} {servo_cmd} joints.Mouth -45\n")   # turn OFF
-            self.ui.button_80.setText("Start")
-            self.mouth = OFF
-
-#
+# ===========================================================================
 # Main call
 #
 def main():

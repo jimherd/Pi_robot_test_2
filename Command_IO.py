@@ -68,6 +68,7 @@ class ServoCommands(IntEnum):
     RUN_SYNC_MOVES     = 4
     STOP               = 5
     STOP_ALL           = 6
+    DISABLE            = 7
 
 class StepperCommands(IntEnum):
     REL_MOVE           = 0
@@ -124,8 +125,6 @@ class Command_IO(QObject):
         else:
             print("Reply received")
             return ErrorCode.OK
-
-
 
     def do_command(self, cmd_string, first_int):
         status = self.send_command(cmd_string)

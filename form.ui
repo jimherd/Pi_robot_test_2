@@ -20,14 +20,14 @@
       <x>430</x>
       <y>40</y>
       <width>921</width>
-      <height>621</height>
+      <height>671</height>
      </rect>
     </property>
     <property name="tabShape">
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="set_serial_port_tab">
      <property name="enabled">
@@ -200,7 +200,7 @@
         <x>15</x>
         <y>5</y>
         <width>759</width>
-        <height>276</height>
+        <height>313</height>
        </rect>
       </property>
       <property name="font">
@@ -1589,7 +1589,7 @@ color: rgb(255, 255, 0)</string>
         <x>15</x>
         <y>290</y>
         <width>759</width>
-        <height>340</height>
+        <height>386</height>
        </rect>
       </property>
       <property name="font">
@@ -3115,46 +3115,6 @@ color: rgb(255, 255, 0)</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="2">
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QRadioButton" name="radioButton_1">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Relative move</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton_2">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Absolute move</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Calibrate</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
        <item row="3" column="0">
         <widget class="QLabel" name="label_10">
          <property name="font">
@@ -3240,7 +3200,7 @@ color: rgb(255, 255, 0)</string>
           <string>Add to group move</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
@@ -3267,13 +3227,13 @@ color: rgb(255, 255, 0)</string>
           <bool>false</bool>
          </property>
          <property name="minimum">
-          <number>-330</number>
+          <number>-60</number>
          </property>
          <property name="maximum">
-          <number>330</number>
+          <number>60</number>
          </property>
          <property name="singleStep">
-          <number>10</number>
+          <number>5</number>
          </property>
         </widget>
        </item>
@@ -3290,7 +3250,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>-330</string>
+              <string>-60</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -3342,7 +3302,7 @@ color: rgb(255, 255, 0)</string>
               <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
              </property>
              <property name="text">
-              <string>330</string>
+              <string>+60</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -3354,10 +3314,10 @@ color: rgb(255, 255, 0)</string>
          <item>
           <widget class="QSlider" name="slider_step_value">
            <property name="minimum">
-            <number>-330</number>
+            <number>-60</number>
            </property>
            <property name="maximum">
-            <number>330</number>
+            <number>60</number>
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -3546,7 +3506,7 @@ color: rgb(255, 255, 0)</string>
           </font>
          </property>
          <property name="text">
-          <string>Set  number of steps</string>
+          <string>Move angle (degrees)</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -3567,8 +3527,46 @@ color: rgb(255, 255, 0)</string>
          </property>
         </widget>
        </item>
+       <item row="3" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <spacer name="horizontalSpacer_35">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_3"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_36">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
       </layout>
      </widget>
+    </widget>
+    <widget class="QWidget" name="display_control">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
     </widget>
    </widget>
    <widget class="QWidget" name="widget_2" native="true">
@@ -3619,7 +3617,7 @@ color: rgb(255, 255, 0)</string>
      <x>0</x>
      <y>0</y>
      <width>1309</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
