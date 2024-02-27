@@ -3565,6 +3565,287 @@ color: rgb(255, 255, 0)</string>
     </widget>
     <widget class="QWidget" name="display_control">
      <attribute name="title">
+      <string>4D Display</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>35</y>
+        <width>541</width>
+        <height>106</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Display 4D page</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>35</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Page index</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_2">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>45</y>
+         <width>56</width>
+         <height>36</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="maximum">
+        <number>6</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>255</x>
+         <y>40</y>
+         <width>146</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Load page</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>175</y>
+        <width>596</width>
+        <height>166</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Display 4D string</string>
+      </property>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>35</y>
+         <width>146</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>String index</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_3">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>40</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="maximum">
+        <number>6</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>285</x>
+         <y>30</y>
+         <width>196</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Load new string</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="textEdit">
+       <property name="geometry">
+        <rect>
+         <x>175</x>
+         <y>100</y>
+         <width>281</width>
+         <height>36</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>136</width>
+         <height>46</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>New string</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>355</y>
+        <width>526</width>
+        <height>176</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Display 4D button</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>285</x>
+         <y>55</y>
+         <width>156</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Read Button</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_4">
+       <property name="geometry">
+        <rect>
+         <x>195</x>
+         <y>65</y>
+         <width>66</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="maximum">
+        <number>6</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>60</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Button index</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>125</y>
+         <width>110</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pressed</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>285</x>
+         <y>125</y>
+         <width>146</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Not pressed</string>
+       </property>
+      </widget>
+     </widget>
+     <zorder>groupBox_3</zorder>
+     <zorder>groupBox_2</zorder>
+     <zorder>groupBox</zorder>
+    </widget>
+    <widget class="QWidget" name="Display_4D">
+     <attribute name="title">
       <string>Page</string>
      </attribute>
     </widget>
@@ -3671,50 +3952,18 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>spinbox_00</sender>
+   <sender>spinbox_10</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>slider_00</receiver>
+   <receiver>slider_10</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>811</x>
-     <y>180</y>
+     <y>240</y>
     </hint>
     <hint type="destinationlabel">
      <x>733</x>
-     <y>187</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>slider_30</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>spinbox_30</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>733</x>
-     <y>367</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>811</x>
-     <y>360</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>slider_00</sender>
-   <signal>sliderMoved(int)</signal>
-   <receiver>spinbox_00</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>733</x>
-     <y>187</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>811</x>
-     <y>180</y>
+     <y>247</y>
     </hint>
    </hints>
   </connection>
@@ -3735,22 +3984,6 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>spinbox_10</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>slider_10</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>811</x>
-     <y>240</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>733</x>
-     <y>247</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>slider_10</sender>
    <signal>sliderMoved(int)</signal>
    <receiver>spinbox_10</receiver>
@@ -3767,18 +4000,50 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>spinbox_20</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>slider_20</receiver>
+   <sender>slider_00</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>spinbox_00</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>811</x>
-     <y>300</y>
+     <x>733</x>
+     <y>187</y>
     </hint>
     <hint type="destinationlabel">
-     <x>733</x>
-     <y>307</y>
+     <x>811</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider_step_value</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>751</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>859</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinbox_50</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slider_50</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>783</x>
+     <y>520</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>723</x>
+     <y>522</y>
     </hint>
    </hints>
   </connection>
@@ -3815,18 +4080,34 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>ping()</slot>
+   <sender>spinbox_20</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slider_20</receiver>
+   <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>635</x>
-     <y>391</y>
+     <x>811</x>
+     <y>300</y>
     </hint>
     <hint type="destinationlabel">
-     <x>355</x>
-     <y>473</y>
+     <x>733</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slider_step_value</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>858</x>
+     <y>324</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>752</x>
+     <y>330</y>
     </hint>
    </hints>
   </connection>
@@ -3863,6 +4144,22 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
+   <sender>slider_70</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinbox_70</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>692</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>778</x>
+     <y>626</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>slider_50</sender>
    <signal>valueChanged(int)</signal>
    <receiver>spinbox_50</receiver>
@@ -3879,66 +4176,18 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>spinbox_50</sender>
+   <sender>slider_30</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>slider_50</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>783</x>
-     <y>520</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>723</x>
-     <y>522</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>slider_60</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>spinbox_60</receiver>
+   <receiver>spinbox_30</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>733</x>
-     <y>593</y>
+     <y>367</y>
     </hint>
     <hint type="destinationlabel">
-     <x>781</x>
-     <y>573</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>spinbox_60</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>slider_60</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
      <x>811</x>
-     <y>586</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>729</x>
-     <y>582</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>slider_70</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>spinbox_70</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>692</x>
-     <y>640</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>778</x>
-     <y>626</y>
+     <y>360</y>
     </hint>
    </hints>
   </connection>
@@ -3959,34 +4208,66 @@ color: rgb(255, 255, 0)</string>
    </hints>
   </connection>
   <connection>
-   <sender>slider_step_value</sender>
+   <sender>spinbox_00</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>spinBox</receiver>
+   <receiver>slider_00</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>330</y>
+     <x>811</x>
+     <y>180</y>
     </hint>
     <hint type="destinationlabel">
-     <x>859</x>
-     <y>321</y>
+     <x>733</x>
+     <y>187</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>spinBox</sender>
+   <sender>spinbox_60</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>slider_step_value</receiver>
+   <receiver>slider_60</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>858</x>
-     <y>324</y>
+     <x>811</x>
+     <y>586</y>
     </hint>
     <hint type="destinationlabel">
-     <x>752</x>
-     <y>330</y>
+     <x>729</x>
+     <y>582</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider_60</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinbox_60</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>733</x>
+     <y>593</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>781</x>
+     <y>573</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ping()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>635</x>
+     <y>391</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>473</y>
     </hint>
    </hints>
   </connection>
