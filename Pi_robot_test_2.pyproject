@@ -4,6 +4,7 @@
         "form.ui",
         "ui_form.py",
         "Command_IO.py",
-        "Globals.py"
+        "Globals.py",
+        "Sequences.py"
     ]
 }

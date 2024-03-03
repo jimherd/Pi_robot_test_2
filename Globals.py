@@ -10,6 +10,12 @@ class This_platform(IntEnum):
     WINDOWS    = 1
     LINUX      = 2
 
+class Display_commands(IntEnum):
+    SET_FORM      = 0
+    GET_FORM      = 1
+    SET_CONTRAST  = 2
+    READ_BUTTON   = 3
+
 class Platform_test():
     def __init__(self):
         self._current_platform = This_platform.UNKNOWN
@@ -27,3 +33,6 @@ class Platform_test():
 
     def get_platform_name(self):
         return self._current_platform_name
+
+
+

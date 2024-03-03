@@ -6,7 +6,8 @@ import serial.tools.list_ports
 import random
 import pyttsx3
 
-from Globals import This_platform, Platform_test
+from Globals import This_platform, Platform_test, Display_commands
+from Sequences import sequences
 
 from PySide6.QtWidgets import QApplication, QMainWindow, QStatusBar, QMessageBox, QLabel, QWidget
 from PySide6.QtGui     import QAction
@@ -33,6 +34,8 @@ NOS_SERVOS      =  8
 
 OFF = 0
 ON  = 1
+
+engine = pyttsx3.init()
 
 baudrate_options = ["115200", "256000", "9600"]
 stepper_cmds_options = ["Relative move", "Absolute move", "Relative move group","Absolute move group", "Calibrate"]
@@ -108,7 +111,7 @@ class MainWindow(QMainWindow):
         self.about_msg = QMessageBox(self)
         serial_port = None
         serial_baud_rate = None
-        engine = pyttsx3.init()
+    #    engine = pyttsx3.init()
         voices = engine.getProperty('voices')  # getting details of current voice
         engine.setProperty('voice', voices[1].id)
         engine.say(intro_string)
@@ -127,6 +130,14 @@ class MainWindow(QMainWindow):
         self.ui.button_70.clicked.connect(lambda x:self.go_servo_cmd(Joints.RIGHT_EYE_BROW))
         self.ui.button_80.clicked.connect(self.Mouth_on_off)
         self.mouth_state = OFF
+
+    # set DISPLAY page info
+        self.ui.pushButton_3.clicked.connect(self.page_update)
+        self.ui.pushButton_4.clicked.connect(self.string_update)
+        self.ui.pushButton_5.clicked.connect(self.read_button)
+
+    # set SEQUENCES page info
+        self.ui.pushButton_6.clicked.connect(self.run_sequence)
 
 # End of initialisation code
 # ===========================================================================
@@ -269,8 +280,6 @@ class MainWindow(QMainWindow):
         self.log_message(Command_IO.reply_string)
         return status
 
-
-
 # ===========================================================================
 # Stepper motor code
     def go_stepper_cmd(self):
@@ -290,6 +299,53 @@ class MainWindow(QMainWindow):
         # log reply string
         self.log_message(Command_IO.reply_string)
         return status
+
+# ===========================================================================
+# Display code
+    def page_update(self):
+        page_index = self.ui.spinBox_2.value()
+        self.cmd_string = (f"display {DEFAULT_PORT} {Display_commands.SET_FORM} {page_index}\n")
+        self.log_message(self.cmd_string)
+        first_val = 0
+
+        status =  Command_IO.do_command(self.cmd_string, first_val)
+        print(status)
+        self.log_message(Command_IO.reply_string)
+        return status
+
+    def string_update(self):
+        string_index = self.ui.spinBox_3.value()
+
+    def read_button(self):
+        button_index = self.ui.spinBox_4.value()
+
+# ===========================================================================
+# sequences code
+#
+# check for local commands (speak, ...) before sending remote command
+# to the rp2040 MCU that controls the robot head hardware
+
+    def run_sequence(self):
+        sequence_index = self.ui.spinBox_5.value()
+        self.log_message("Sequence run")
+        for i in range(len(sequences[sequence_index])):
+            self.log_message(sequences[sequence_index][i])
+            cmd_argv = sequences[sequence_index][i].split()
+            match cmd_argv[0]:
+                case "speak":
+                    say_list = cmd_argv[1:]
+                    sentence = " ".join(say_list)
+                    engine.say(sentence)
+                    engine.runAndWait()
+                    continue   # move to next sequence command
+                case _:
+                    pass       # must be a remote command
+            first_val = 0
+            self.cmd_string = (f"{sequences[sequence_index][i]}\n")
+            status =  Command_IO.do_command(self.cmd_string, first_val)
+            self.log_message(f"Status = {status}")
+            if (status != 0):
+                return
 
 # ===========================================================================
 # Main call

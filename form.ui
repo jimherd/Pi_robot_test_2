@@ -27,7 +27,7 @@
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="set_serial_port_tab">
      <property name="enabled">
@@ -3640,6 +3640,9 @@ color: rgb(255, 255, 0)</string>
        <property name="text">
         <string>Load page</string>
        </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
       </widget>
      </widget>
      <widget class="QGroupBox" name="groupBox_2">
@@ -3846,8 +3849,62 @@ color: rgb(255, 255, 0)</string>
     </widget>
     <widget class="QWidget" name="Display_4D">
      <attribute name="title">
-      <string>Page</string>
+      <string>Sequences</string>
      </attribute>
+     <widget class="QSpinBox" name="spinBox_5">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>150</y>
+        <width>91</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="maximum">
+       <number>6</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>145</y>
+        <width>181</width>
+        <height>46</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Run sequence</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>105</x>
+        <y>115</y>
+        <width>161</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sequence number</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="widget_2" native="true">
