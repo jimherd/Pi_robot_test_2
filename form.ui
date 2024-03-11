@@ -17,17 +17,17 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>40</y>
+      <x>415</x>
+      <y>0</y>
       <width>921</width>
-      <height>671</height>
+      <height>726</height>
      </rect>
     </property>
     <property name="tabShape">
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="set_serial_port_tab">
      <property name="enabled">
@@ -198,8 +198,8 @@
       <property name="geometry">
        <rect>
         <x>15</x>
-        <y>5</y>
-        <width>759</width>
+        <y>0</y>
+        <width>761</width>
         <height>313</height>
        </rect>
       </property>
@@ -1587,7 +1587,7 @@ color: rgb(255, 255, 0)</string>
       <property name="geometry">
        <rect>
         <x>15</x>
-        <y>290</y>
+        <y>300</y>
         <width>759</width>
         <height>386</height>
        </rect>
@@ -3816,7 +3816,7 @@ color: rgb(255, 255, 0)</string>
         <string>Button index</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton">
+      <widget class="QRadioButton" name="radioButton_1">
        <property name="geometry">
         <rect>
          <x>85</x>
@@ -3921,8 +3921,8 @@ color: rgb(255, 255, 0)</string>
       <rect>
        <x>20</x>
        <y>15</y>
-       <width>91</width>
-       <height>16</height>
+       <width>101</width>
+       <height>26</height>
       </rect>
      </property>
      <property name="font">
@@ -3937,8 +3937,8 @@ color: rgb(255, 255, 0)</string>
     <widget class="QTextEdit" name="info_textEdit">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>40</y>
+       <x>15</x>
+       <y>50</y>
        <width>371</width>
        <height>301</height>
       </rect>

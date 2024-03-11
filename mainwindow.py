@@ -1,10 +1,13 @@
 # This Python file uses the following encoding: utf-8
 
 import sys
+import os
 import serial
 import serial.tools.list_ports
 import random
 import pyttsx3
+import time
+import playsound
 
 from Globals import This_platform, Platform_test, Display_commands
 from Sequences import sequences
@@ -17,6 +20,8 @@ from qt_material       import apply_stylesheet   # added
 from ui_form           import Ui_MainWindow
 
 from Command_IO import  Command_IO, ErrorCode, Joints, ServoCommands
+
+from playsound import playsound
 
 # Important:
 # You need to run the following command to generate the ui_form.py file
@@ -31,6 +36,8 @@ intro_string = "Hello"
 DEFAULT_PORT    =  9
 SPEED_THRESHOLD = 21
 NOS_SERVOS      =  8
+
+
 
 OFF = 0
 ON  = 1
@@ -118,6 +125,7 @@ class MainWindow(QMainWindow):
         engine.runAndWait()
         Platform_test.check_platform(self)
         self.platform_label.setText("Platform: " + Platform_test.get_platform_name(self))
+        self.sound_dir = os.path.join(os.getcwd(), "Media", "Sounds")
 
     # route SERVO go buttons to a single slot with and added button code
         self.ui.button_00.clicked.connect(lambda x:self.go_servo_cmd(Joints.LEFT_EYE_RIGHT_LEFT))
@@ -307,7 +315,6 @@ class MainWindow(QMainWindow):
         self.cmd_string = (f"display {DEFAULT_PORT} {Display_commands.SET_FORM} {page_index}\n")
         self.log_message(self.cmd_string)
         first_val = 0
-
         status =  Command_IO.do_command(self.cmd_string, first_val)
         print(status)
         self.log_message(Command_IO.reply_string)
@@ -318,6 +325,24 @@ class MainWindow(QMainWindow):
 
     def read_button(self):
         button_index = self.ui.spinBox_4.value()
+        self.cmd_string = (f"display {DEFAULT_PORT} {Display_commands.READ_BUTTON} {button_index}\n")
+        self.log_message(self.cmd_string)
+        first_val = 0
+        status =  Command_IO.do_command(self.cmd_string, first_val)
+        print(status)
+        self.log_message(Command_IO.reply_string)
+        if (status == ErrorCode.OK):
+            if (Command_IO.int_parameter[2] == 0):
+                self.ui.radioButton_1.setChecked(False)
+                self.ui.radioButton_2.setChecked(True)
+            else:
+                if (Command_IO.int_parameter[2] == 1):
+                    self.ui.radioButton_1.setChecked(True)
+                    self.ui.radioButton_2.setChecked(False)
+                else:
+                    self.ui.radioButton_1.setChecked(False)
+                    self.ui.radioButton_2.setChecked(False)
+        return status
 
 # ===========================================================================
 # sequences code
@@ -333,19 +358,28 @@ class MainWindow(QMainWindow):
             cmd_argv = sequences[sequence_index][i].split()
             match cmd_argv[0]:
                 case "speak":
-                    say_list = cmd_argv[1:]
+                    say_list = cmd_argv[2:]
                     sentence = " ".join(say_list)
                     engine.say(sentence)
-                    engine.runAndWait()
-                    continue   # move to next sequence command
-                case _:
-                    pass       # must be a remote command
-            first_val = 0
-            self.cmd_string = (f"{sequences[sequence_index][i]}\n")
-            status =  Command_IO.do_command(self.cmd_string, first_val)
-            self.log_message(f"Status = {status}")
-            if (status != 0):
-                return
+                    if (int(cmd_argv[1]) == 1):
+                        engine.runAndWait()
+                case "plays":
+                    playsound(os.path.join(self.sound_dir, cmd_argv[1]))
+                case "delay":
+                    delay = int(cmd_argv[1])
+                    time.sleep(delay)
+                case _:          # must be a remote command
+                    first_val = 0
+                    self.cmd_string = sequences[sequence_index][i] + "\n"  #   (f"{sequences[sequence_index][i]}\n")
+                    self.log_message(self.cmd_string)
+                    status =  Command_IO.do_command(self.cmd_string, first_val)
+                    self.log_message(Command_IO.reply_string)
+                    self.log_message(f"Status = {status}")
+                    if (status != ErrorCode.OK):
+                        return status
+        return ErrorCode.OK
+
+
 
 # ===========================================================================
 # Main call

@@ -47,12 +47,13 @@ class ErrorCode(IntEnum):
     STEPPER_BUSY                    = -117
     SERVO_BUSY                      = -118
 
-    BAD_COMPORT_OPEN                = -200     # PC errors
+    BAD_COMPORT_OPEN                = -200     # PC/Pi errors
     UNKNOWN_COM_PORT                = -201
     BAD_COMPORT_READ                = -202
     BAD_COMPORT_WRITE               = -203
     NULL_EMPTY_STRING               = -204
     BAD_COMPORT_CLOSE               = -205
+    BAD_STRING_PARSE                = -206
 
 class Modes(IntEnum):
     MODE_U = 0
@@ -82,6 +83,7 @@ class Command_IO(QObject):
         super(Command_IO, self).__init__
         self.parent = parent
         self.reply_string = ""
+        self.reply_tmp_byte_string = ""
 
         self.MAX_COMMAND_PARAMETERS = 10
         self.READ_TIMEOUT = 4  # seconds
@@ -123,7 +125,6 @@ class Command_IO(QObject):
         if (len(self.reply_string) == 0):
             return ErrorCode.BAD_COMPORT_READ
         else:
-            print("Reply received")
             return ErrorCode.OK
 
     def do_command(self, cmd_string, first_int):
@@ -133,9 +134,11 @@ class Command_IO(QObject):
         status = self.get_reply()
         if(status != ErrorCode.OK):
             return status
-        status = self.Parse_string(cmd_string)
+        status = self.Parse_string(self.reply_string)
         if(status != ErrorCode.OK):
             return status
+        status = self.int_parameter[1]
+        return status
 
     def Parse_string(self, string_data):
         for index in range(self.MAX_COMMAND_PARAMETERS):
@@ -143,20 +146,36 @@ class Command_IO(QObject):
             self.float_parameter[index] = 0.0
             self.param_type[index] = int(Modes.MODE_U)
             self.argc = 0
+        # break string into a list of strings
         self.string_parameters = string_data.split()
         self.argc = len(self.string_parameters)
+        print(self.reply_string)
+        print(int(self.string_parameters[2]))
 
         for index in range(self.argc):
-            if not isinstance(self.string_parameters[index], str):
-                return None
-            if self.string_parameters[index].isdigit():
+            flag = True
+            try:
+                int(self.string_parameters[index])
+            except ValueError:
+                flag = False
+            if (flag == True):
                 self.int_parameter[index] = int(self.string_parameters[index])
                 self.param_type[index] = Modes.MODE_I
+                continue
+
+            flag = True
             try:
-                self.float_parameter[index] = float(self.string_parameters[index])
-                self.param_type[index] = Modes.MODE_R
+                float(self.string_parameters[index])
             except ValueError:
-                self.param_type[index] = Modes.MODE_S
+                flag = False
+            if (flag == True):
+                self.int_parameter[index] = float(self.string_parameters[index])
+                self.param_type[index] = Modes.MODE_R
+                print("float detected")
+                continue
+
+            self.param_type[index] = Modes.MODE_S
+            print(self.int_parameter)
 
         return ErrorCode.OK
 
