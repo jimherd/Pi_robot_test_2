@@ -150,7 +150,6 @@ class Command_IO(QObject):
         self.string_parameters = string_data.split()
         self.argc = len(self.string_parameters)
         print(self.reply_string)
-        print(int(self.string_parameters[2]))
 
         for index in range(self.argc):
             flag = True

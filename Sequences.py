@@ -30,6 +30,7 @@ sequences = [
     ],
     [      # Sequence 3
         "ping 9 43",
+        "display 9 0 1",
         "display 9 4 0 \"Hello Jim\"",
     ],
 ]
